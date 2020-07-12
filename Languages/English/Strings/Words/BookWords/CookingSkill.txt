@@ -1,0 +1,116 @@
+﻿cooking
+grilling
+brewing
+chefs
+culinary arts
+baking
+frying
+broiling
+boiling
+seasoning
+marinating
+cake decorating
+pasta rolling
+butchering
+dicing
+canning
+cheese making
+alcohol aging
+food plating
+candy making
+microplaning
+mixing
+whipping
+cooks
+caramelizing
+stewing
+simmering
+preserving
+barbequing
+fermenting
+filleting
+deglazing
+descaling
+garnishing
+battering
+proaching
+blanching
+creaming
+infusing
+julienning
+leavening
+parboiling
+chocolate tempering
+slow cooking
+pickling
+pureeing
+kneading
+sauteing
+smoking
+scalloping
+skewering
+steaming
+steeping
+slicing
+chopping
+sweetening
+tenderizing
+whisking
+curing
+dry aging
+aromatics
+fine dining
+
+stir-fry
+seafood
+sweets
+pizza
+steaks
+burgers
+cake
+beer
+booze
+sausage
+fish
+pasta
+condiments
+breakfast
+eggs
+toast
+snacks
+chips
+crisps
+fries
+soda
+juice
+milk
+chocolate bars
+espresso
+coffee
+tea
+sandwiches
+platters
+buffets
+charcuterie
+soups
+stews
+appetizers
+rotisserie
+donuts
+curry
+bagels
+tacos
+burritos
+kebabs
+cheese
+mushrooms
+salads
+cloches
+silverware
+butchering
+desserts
+gourmets
+gourmands
+preserves
+nutrient paste
+syrups

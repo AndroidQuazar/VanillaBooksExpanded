@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+    <name>Vanilla Books Expanded</name>
+    <author>Oskar Potocki</author>
+    <url></url>
+    <description>gfhfh</description>
+    <supportedVersions>
+        <li>1.1</li>
+		<li>1.0</li>
+    </supportedVersions>
+	<packageId>VanillaExpanded.VBE</packageId>
+</ModMetaData>

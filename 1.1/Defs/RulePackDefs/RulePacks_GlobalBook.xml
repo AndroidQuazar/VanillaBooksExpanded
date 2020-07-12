@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>VBE_BookUtility</defName>
+    <include>
+      <li>GlobalUtility</li>
+      <li>ArtNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>maybe_adjective-></li>
+		<li>maybe_adjective->[Color]</li>
+		<li>maybe_adjective->[AdjectiveBadass]</li>
+		<li>maybe_adjective->[AdjectiveAngsty]</li>
+		<li>Adjective->[Color]</li>
+		<li>Adjective->[AdjectiveBadass]</li>
+		<li>Adjective->[AdjectiveAngsty]</li>
+		<li>cover->The cover of this book [depicts] [image].</li>
+		<li>cover->This book's cover bears a [depiction] of [image].</li>
+		<li>cover->On this book's cover is a [depiction] of [image].</li>
+		<li>first_chapters->The first few chapters of this book describe the use of </li>
+		<li>first_chapters->First part of the book goes in detail about </li>
+		<li>first_chapters->First few pages describe the use of </li>
+		<li>first_chapters->The beginning of the book revolves around </li>
+		<li>first_chapters->The book starts off with </li>
+		<li>first_chapters->The beginning is about </li>
+		<li>maybe_cont(p=2)->	</li>
+		<li>maybe_cont-> within the context of [ConceptAny]</li>
+		<li>maybe_cont-> in a [AdjectiveBadass] tone</li>
+		<li>maybe_cont-> and the importance of [ConceptAny]</li>
+		<li>maybe_cont-> with emphasis on the use of [TerrainFeature]</li>
+		<li>maybe_cont-> and how [Vegetable] can be used to improve it</li>
+		<li>maybe_cont-> during the game of [Game]</li>
+		<li>maybe_cont-> within the world of the [Animal]</li>
+		<li>maybe_cont-> and the beauty of [Gore]</li>
+		<li>maybe_cont-> and compares it to a [NaturalObject]</li>
+		<li>maybe_cont-> from the perspective of the [Enemy]</li>
+		<li>maybe_cont-> based on experience from the middle of a [Community]</li>
+		<li>maybe_cont->, with personal insights from a [Character]</li>
+		<li>maybe_cont->, based on the interview with the minor celebrity [NamePerson]</li>
+		<li>middle_book->The author then proceeds to describe</li>
+		<li>middle_book->The following chapters allow the reader to contemplate on</li>
+		<li>middle_book->The next chapters discuss</li>
+		<li>middle_book->After that, the author went to great lengths to explain</li>
+		<li>middle_book->The middle of the book speaks about</li>
+		<li>middle_book->The next bit is about</li>
+		<li>ending->Near the ending, author summarizes</li>
+		<li>ending->By the end of the book, emphasis is placed on</li>
+		<li>ending->The last few chapters mention</li>
+		<li>ending->Ending of the book is about</li>
+		<li>ending->The final chapter revolves around</li>
+		<li>ending->The last page mentions</li>
+		<li>ending->The last part of the book is about</li>
+		<li>ending->Author decided to devote the last part of the book to</li>
+		<li>book_context->infused with the idea of [ConceptAny] and is done in a [bookstyle_adj] style	</li>
+		<li>book_context->written in a [bookstyle_adj] style</li>
+		<li>book_context->executed in a [bookstyle_adj] style</li>
+		<li>book_context->[bookstyle_adj] with [bookstyle_adj] elements</li>
+		<li>book_context->[bookstyle_adj]</li>
+		<li>book_context->[bookstyle_adj] yet [bookstyle_adj]</li>
+		<li>maybe_writingstyles(p=3)-></li>
+		<li>maybe_writingstyles->, using a large amount of [bookstyle]</li>
+		<li>maybe_writingstyles->, riddled with [bookstyle]</li>
+		<li>maybe_writingstyles->, without using [bookstyle] even once</li>
+		<li>maybe_writingstyles->, written only using [bookstyle]	</li>
+		<li>maybe_writingstyles->, with a high amount of [bookstyle] and absolutely no [bookstyle]</li>
+		<li>maybe_writingstyles->. Author used a number of [bookstyle], mixed in with [bookstyle] and [bookstyle]</li>
+		<li>maybe_writingstyles-> with a number of [bookstyle_adj] [bookstyle]</li>
+		<li>book->book</li>
+		<li>book->work</li>
+		<li>book->piece of writing</li>
+		<li>book->work of writing</li>
+		<li>book->text</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>bookstyle->Words/BookWords/BookStyles</li>
+        <li>bookstyle_adj->Words/BookWords/BookStylesAdjectives</li>
+		<li>ShootingSkill->Words/BookWords/ShootingSkill</li>
+		<li>AnimalsSkill->Words/BookWords/AnimalsSkill</li>
+		<li>ArtSkill->Words/BookWords/ArtSkill</li>
+		<li>ConstructionSkill->Words/BookWords/ConstructionSkill</li>
+		<li>CookingSkill->Words/BookWords/CookingSkill</li>
+		<li>CraftingSkill->Words/BookWords/CraftingSkill</li>
+		<li>GrowingSkill->Words/BookWords/GrowingSkill</li>
+		<li>IntellectualSkill->Words/BookWords/IntellectualSkill</li>
+		<li>MedicalSkill->Words/BookWords/MedicalSkill</li>
+		<li>MeleeSkill->Words/BookWords/MeleeSkill</li>
+		<li>MiningSkill->Words/BookWords/MiningSkill</li>
+		<li>SocialSkill->Words/BookWords/SocialSkill</li>
+		<li>Books->Words/BookWords/Books</li>
+      </rulesFiles>
+	   </rulePack>
+	  </RulePackDef>
+</Defs>

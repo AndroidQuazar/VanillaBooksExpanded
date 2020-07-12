@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--======== test book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookTest</defName>
+    <include>
+      <li>ArtNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_art_name->[Artwork] [Trans] [ConceptAny]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  
+  <RulePackDef>
+    <defName>VBE_DescriptionBookTest</defName>
+    <include>
+      <li>ArtNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_art_description->[physical_description_root] [context_sentence]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <RulePackDef>
+    <defName>ArtDescription_BookShooting</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>physical_description_root->[Books] of [maybe_adjective] [Weapon]</li>
+        <li>physical_description_root->[AdjectiveBadass] [Books] of [ShootingSkill]</li>
+        <li>physical_description_root->[AdjectiveLarge] [Books] of [ShootingSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+
+  <!--======== Shooting book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookShooting</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_shootingbook_name->[Books] of [maybe_adjective] [Weapon] </li>	
+		<li>r_shootingbook_name->[AdjectiveBadass] [Books] of [ShootingSkill]</li>	
+		<li>r_shootingbook_name->[AdjectiveLarge] [Books] of [ShootingSkill]</li>	
+		<li>r_shootingbook_name->[PeopleBadass]'s [Books] of [ShootingSkill]</li>
+		<li>r_shootingbook_name->[Books] of [maybe_adjective] [ShootingSkill]</li>	
+		<li>r_shootingbook_name->[AdjectiveBadass] [Books] of the [Weapon]</li>	
+		<li>r_shootingbook_name->The [Adjective] [Noun]: History of	[ShootingSkill]</li>
+        <!-- Numeric -->		
+		<li>r_shootingbook_name->[ShootingSkill] [Digit]</li>
+        <li>r_shootingbook_name->[maybe_letter][Digit][maybe_letter]: [ShootingSkill]</li>
+        <li>r_shootingbook_name->[maybe_letter][Digit][Digit][maybe_letter]: [ShootingSkill]</li>
+        <li>r_shootingbook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [ShootingSkill]</li>
+        <li>r_shootingbook_name->[maybe_letter][RomanNumeral][maybe_letter]: [ShootingSkill]</li>
+		<!-- Person -->
+		<li>r_shootingbook_name->[ANYPAWN_nameIndef]'s [Books] of the [ShootingSkill]</li>
+		<li>r_shootingbook_name->[ShootingSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_shootingbook_name->[ANYPAWN_nameIndef]'s [Books]: [ShootingSkill]</li>
+        <li>r_shootingbook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [ShootingSkill]</li>
+        <li>r_shootingbook_name->[Noun] and [ShootingSkill]</li>
+        <li>r_shootingbook_name->[ConceptAny] and [ShootingSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <!--======== Animals book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookAnimals</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_animalsbook_name->[Books] of [maybe_adjective] [Animal] </li>	
+		<li>r_animalsbook_name->[AdjectiveBadass] [Books] of [AnimalsSkill]</li>	
+		<li>r_animalsbook_name->[AdjectiveLarge] [Books] of [AnimalsSkill]</li>	
+		<li>r_animalsbook_name->[PeopleBadass]'s [Books] of [AnimalsSkill]</li>
+		<li>r_animalsbook_name->[Books] of [maybe_adjective] [AnimalsSkill]</li>	
+		<li>r_animalsbook_name->[AdjectiveBadass] [Books] of the [Animal]</li>	
+		<li>r_animalsbook_name->The [Adjective] [Noun]: History of	[AnimalsSkill]</li>
+        <!-- Numeric -->		
+		<li>r_animalsbook_name->[AnimalsSkill] [Digit]</li>
+        <li>r_animalsbook_name->[maybe_letter][Digit][maybe_letter]: [AnimalsSkill]</li>
+        <li>r_animalsbook_name->[maybe_letter][Digit][Digit][maybe_letter]: [AnimalsSkill]</li>
+        <li>r_animalsbook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [AnimalsSkill]</li>
+        <li>r_animalsbook_name->[maybe_letter][RomanNumeral][maybe_letter]: [AnimalsSkill]</li>
+		<!-- Person -->
+		<li>r_animalsbook_name->[ANYPAWN_nameIndef]'s [Books] of the [AnimalsSkill]</li>
+		<li>r_animalsbook_name->[AnimalsSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_animalsbook_name->[ANYPAWN_nameIndef]'s [Books]: [AnimalsSkill]</li>
+        <li>r_animalsbook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [AnimalsSkill]</li>
+        <li>r_animalsbook_name->[Noun] and [AnimalsSkill]</li>
+        <li>r_animalsbook_name->[ConceptAny] and [AnimalsSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <!--======== Art book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookArt</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_artbook_name->[Books] of [maybe_adjective] [Animal] </li>	
+		<li>r_artbook_name->[AdjectiveBadass] [Books] of [ArtSkill]</li>	
+		<li>r_artbook_name->[AdjectiveLarge] [Books] of [ArtSkill]</li>	
+		<li>r_artbook_name->[PeopleBadass]'s [Books] of [ArtSkill]</li>
+		<li>r_artbook_name->[Books] of [maybe_adjective] [ArtSkill]</li>	
+		<li>r_artbook_name->[AdjectiveBadass] [Books] of the [Animal]</li>	
+		<li>r_artbook_name->The [Adjective] [Noun]: History of	[ArtSkill]</li>
+        <!-- Numeric -->		
+		<li>r_artbook_name->[ArtSkill] [Digit]</li>
+        <li>r_artbook_name->[maybe_letter][Digit][maybe_letter]: [ArtSkill]</li>
+        <li>r_artbook_name->[maybe_letter][Digit][Digit][maybe_letter]: [ArtSkill]</li>
+        <li>r_artbook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [ArtSkill]</li>
+        <li>r_artbook_name->[maybe_letter][RomanNumeral][maybe_letter]: [ArtSkill]</li>
+		<!-- Person -->
+		<li>r_artbook_name->[ANYPAWN_nameIndef]'s [Books] of the [ArtSkill]</li>
+		<li>r_artbook_name->[ArtSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_artbook_name->[ANYPAWN_nameIndef]'s [Books]: [ArtSkill]</li>
+        <li>r_artbook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [ArtSkill]</li>
+        <li>r_artbook_name->[Noun] and [ArtSkill]</li>
+        <li>r_artbook_name->[ConceptAny] and [ArtSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <!--======== Construction book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookConstruction</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_constructionbook_name->[Books] of [maybe_adjective] [Animal] </li>	
+		<li>r_constructionbook_name->[AdjectiveBadass] [Books] of [ConstructionSkill]</li>	
+		<li>r_constructionbook_name->[AdjectiveLarge] [Books] of [ConstructionSkill]</li>	
+		<li>r_constructionbook_name->[PeopleBadass]'s [Books] of [ConstructionSkill]</li>
+		<li>r_constructionbook_name->[Books] of [maybe_adjective] [ConstructionSkill]</li>	
+		<li>r_constructionbook_name->[AdjectiveBadass] [Books] of the [Animal]</li>	
+		<li>r_constructionbook_name->The [Adjective] [Noun]: History of	[ConstructionSkill]</li>
+        <!-- Numeric -->		
+		<li>r_constructionbook_name->[ConstructionSkill] [Digit]</li>
+        <li>r_constructionbook_name->[maybe_letter][Digit][maybe_letter]: [ConstructionSkill]</li>
+        <li>r_constructionbook_name->[maybe_letter][Digit][Digit][maybe_letter]: [ConstructionSkill]</li>
+        <li>r_constructionbook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [ConstructionSkill]</li>
+        <li>r_constructionbook_name->[maybe_letter][RomanNumeral][maybe_letter]: [ConstructionSkill]</li>
+		<!-- Person -->
+		<li>r_constructionbook_name->[ANYPAWN_nameIndef]'s [Books] of the [ConstructionSkill]</li>
+		<li>r_constructionbook_name->[ConstructionSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_constructionbook_name->[ANYPAWN_nameIndef]'s [Books]: [ConstructionSkill]</li>
+        <li>r_constructionbook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [ConstructionSkill]</li>
+        <li>r_constructionbook_name->[Noun] and [ConstructionSkill]</li>
+        <li>r_constructionbook_name->[ConceptAny] and [ConstructionSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <!--======== Cooking book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookCooking</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_cookingbook_name->[Books] of [maybe_adjective] [Animal] </li>	
+		<li>r_cookingbook_name->[AdjectiveBadass] [Books] of [CookingSkill]</li>	
+		<li>r_cookingbook_name->[AdjectiveLarge] [Books] of [CookingSkill]</li>	
+		<li>r_cookingbook_name->[PeopleBadass]'s [Books] of [CookingSkill]</li>
+		<li>r_cookingbook_name->[Books] of [maybe_adjective] [CookingSkill]</li>	
+		<li>r_cookingbook_name->[AdjectiveBadass] [Books] of the [Animal]</li>	
+		<li>r_cookingbook_name->The [Adjective] [Noun]: History of	[CookingSkill]</li>
+        <!-- Numeric -->		
+		<li>r_cookingbook_name->[CookingSkill] [Digit]</li>
+        <li>r_cookingbook_name->[maybe_letter][Digit][maybe_letter]: [CookingSkill]</li>
+        <li>r_cookingbook_name->[maybe_letter][Digit][Digit][maybe_letter]: [CookingSkill]</li>
+        <li>r_cookingbook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [CookingSkill]</li>
+        <li>r_cookingbook_name->[maybe_letter][RomanNumeral][maybe_letter]: [CookingSkill]</li>
+		<!-- Person -->
+		<li>r_cookingbook_name->[ANYPAWN_nameIndef]'s [Books] of the [CookingSkill]</li>
+		<li>r_cookingbook_name->[CookingSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_cookingbook_name->[ANYPAWN_nameIndef]'s [Books]: [CookingSkill]</li>
+        <li>r_cookingbook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [CookingSkill]</li>
+        <li>r_cookingbook_name->[Noun] and [CookingSkill]</li>
+        <li>r_cookingbook_name->[ConceptAny] and [CookingSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <!--======== Crafting book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookCrafting</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_craftingbook_name->[Books] of [maybe_adjective] [Animal] </li>	
+		<li>r_craftingbook_name->[AdjectiveBadass] [Books] of [CraftingSkill]</li>	
+		<li>r_craftingbook_name->[AdjectiveLarge] [Books] of [CraftingSkill]</li>	
+		<li>r_craftingbook_name->[PeopleBadass]'s [Books] of [CraftingSkill]</li>
+		<li>r_craftingbook_name->[Books] of [maybe_adjective] [CraftingSkill]</li>	
+		<li>r_craftingbook_name->[AdjectiveBadass] [Books] of the [Animal]</li>	
+		<li>r_craftingbook_name->The [Adjective] [Noun]: History of	[CraftingSkill]</li>
+        <!-- Numeric -->		
+		<li>r_craftingbook_name->[CraftingSkill] [Digit]</li>
+        <li>r_craftingbook_name->[maybe_letter][Digit][maybe_letter]: [CraftingSkill]</li>
+        <li>r_craftingbook_name->[maybe_letter][Digit][Digit][maybe_letter]: [CraftingSkill]</li>
+        <li>r_craftingbook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [CraftingSkill]</li>
+        <li>r_craftingbook_name->[maybe_letter][RomanNumeral][maybe_letter]: [CraftingSkill]</li>
+		<!-- Person -->
+		<li>r_craftingbook_name->[ANYPAWN_nameIndef]'s [Books] of the [CraftingSkill]</li>
+		<li>r_craftingbook_name->[CraftingSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_craftingbook_name->[ANYPAWN_nameIndef]'s [Books]: [CraftingSkill]</li>
+        <li>r_craftingbook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [CraftingSkill]</li>
+        <li>r_craftingbook_name->[Noun] and [CraftingSkill]</li>
+        <li>r_craftingbook_name->[ConceptAny] and [CraftingSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <!--======== Growing book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookGrowing</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_growingbook_name->[Books] of [maybe_adjective] [Animal] </li>	
+		<li>r_growingbook_name->[AdjectiveBadass] [Books] of [GrowingSkill]</li>	
+		<li>r_growingbook_name->[AdjectiveLarge] [Books] of [GrowingSkill]</li>	
+		<li>r_growingbook_name->[PeopleBadass]'s [Books] of [GrowingSkill]</li>
+		<li>r_growingbook_name->[Books] of [maybe_adjective] [GrowingSkill]</li>	
+		<li>r_growingbook_name->[AdjectiveBadass] [Books] of the [Animal]</li>	
+		<li>r_growingbook_name->The [Adjective] [Noun]: History of	[GrowingSkill]</li>
+        <!-- Numeric -->		
+		<li>r_growingbook_name->[GrowingSkill] [Digit]</li>
+        <li>r_growingbook_name->[maybe_letter][Digit][maybe_letter]: [GrowingSkill]</li>
+        <li>r_growingbook_name->[maybe_letter][Digit][Digit][maybe_letter]: [GrowingSkill]</li>
+        <li>r_growingbook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [GrowingSkill]</li>
+        <li>r_growingbook_name->[maybe_letter][RomanNumeral][maybe_letter]: [GrowingSkill]</li>
+		<!-- Person -->
+		<li>r_growingbook_name->[ANYPAWN_nameIndef]'s [Books] of the [GrowingSkill]</li>
+		<li>r_growingbook_name->[GrowingSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_growingbook_name->[ANYPAWN_nameIndef]'s [Books]: [GrowingSkill]</li>
+        <li>r_growingbook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [GrowingSkill]</li>
+        <li>r_growingbook_name->[Noun] and [GrowingSkill]</li>
+        <li>r_growingbook_name->[ConceptAny] and [GrowingSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <!--======== Intellectual book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookIntellectual</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_intellectualbook_name->[Books] of [maybe_adjective] [Animal] </li>	
+		<li>r_intellectualbook_name->[AdjectiveBadass] [Books] of [IntellectualSkill]</li>	
+		<li>r_intellectualbook_name->[AdjectiveLarge] [Books] of [IntellectualSkill]</li>	
+		<li>r_intellectualbook_name->[PeopleBadass]'s [Books] of [IntellectualSkill]</li>
+		<li>r_intellectualbook_name->[Books] of [maybe_adjective] [IntellectualSkill]</li>	
+		<li>r_intellectualbook_name->[AdjectiveBadass] [Books] of the [Animal]</li>	
+		<li>r_intellectualbook_name->The [Adjective] [Noun]: History of	[IntellectualSkill]</li>
+        <!-- Numeric -->		
+		<li>r_intellectualbook_name->[IntellectualSkill] [Digit]</li>
+        <li>r_intellectualbook_name->[maybe_letter][Digit][maybe_letter]: [IntellectualSkill]</li>
+        <li>r_intellectualbook_name->[maybe_letter][Digit][Digit][maybe_letter]: [IntellectualSkill]</li>
+        <li>r_intellectualbook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [IntellectualSkill]</li>
+        <li>r_intellectualbook_name->[maybe_letter][RomanNumeral][maybe_letter]: [IntellectualSkill]</li>
+		<!-- Person -->
+		<li>r_intellectualbook_name->[ANYPAWN_nameIndef]'s [Books] of the [IntellectualSkill]</li>
+		<li>r_intellectualbook_name->[IntellectualSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_intellectualbook_name->[ANYPAWN_nameIndef]'s [Books]: [IntellectualSkill]</li>
+        <li>r_intellectualbook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [IntellectualSkill]</li>
+        <li>r_intellectualbook_name->[Noun] and [IntellectualSkill]</li>
+        <li>r_intellectualbook_name->[ConceptAny] and [IntellectualSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  
+  <!--======== Medical book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookMedical</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_medicalbook_name->[Books] of [maybe_adjective] [Animal] </li>	
+		<li>r_medicalbook_name->[AdjectiveBadass] [Books] of [MedicalSkill]</li>	
+		<li>r_medicalbook_name->[AdjectiveLarge] [Books] of [MedicalSkill]</li>	
+		<li>r_medicalbook_name->[PeopleBadass]'s [Books] of [MedicalSkill]</li>
+		<li>r_medicalbook_name->[Books] of [maybe_adjective] [MedicalSkill]</li>	
+		<li>r_medicalbook_name->[AdjectiveBadass] [Books] of the [Animal]</li>	
+		<li>r_medicalbook_name->The [Adjective] [Noun]: History of	[MedicalSkill]</li>
+        <!-- Numeric -->		
+		<li>r_medicalbook_name->[MedicalSkill] [Digit]</li>
+        <li>r_medicalbook_name->[maybe_letter][Digit][maybe_letter]: [MedicalSkill]</li>
+        <li>r_medicalbook_name->[maybe_letter][Digit][Digit][maybe_letter]: [MedicalSkill]</li>
+        <li>r_medicalbook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [MedicalSkill]</li>
+        <li>r_medicalbook_name->[maybe_letter][RomanNumeral][maybe_letter]: [MedicalSkill]</li>
+		<!-- Person -->
+		<li>r_medicalbook_name->[ANYPAWN_nameIndef]'s [Books] of the [MedicalSkill]</li>
+		<li>r_medicalbook_name->[MedicalSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_medicalbook_name->[ANYPAWN_nameIndef]'s [Books]: [MedicalSkill]</li>
+        <li>r_medicalbook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [MedicalSkill]</li>
+        <li>r_medicalbook_name->[Noun] and [MedicalSkill]</li>
+        <li>r_medicalbook_name->[ConceptAny] and [MedicalSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  
+  <!--======== Melee book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookMelee</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_meleebook_name->[Books] of [maybe_adjective] [Animal] </li>	
+		<li>r_meleebook_name->[AdjectiveBadass] [Books] of [MeleeSkill]</li>	
+		<li>r_meleebook_name->[AdjectiveLarge] [Books] of [MeleeSkill]</li>	
+		<li>r_meleebook_name->[PeopleBadass]'s [Books] of [MeleeSkill]</li>
+		<li>r_meleebook_name->[Books] of [maybe_adjective] [MeleeSkill]</li>	
+		<li>r_meleebook_name->[AdjectiveBadass] [Books] of the [Animal]</li>	
+		<li>r_meleebook_name->The [Adjective] [Noun]: History of	[MeleeSkill]</li>
+        <!-- Numeric -->		
+		<li>r_meleebook_name->[MeleeSkill] [Digit]</li>
+        <li>r_meleebook_name->[maybe_letter][Digit][maybe_letter]: [MeleeSkill]</li>
+        <li>r_meleebook_name->[maybe_letter][Digit][Digit][maybe_letter]: [MeleeSkill]</li>
+        <li>r_meleebook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [MeleeSkill]</li>
+        <li>r_meleebook_name->[maybe_letter][RomanNumeral][maybe_letter]: [MeleeSkill]</li>
+		<!-- Person -->
+		<li>r_meleebook_name->[ANYPAWN_nameIndef]'s [Books] of the [MeleeSkill]</li>
+		<li>r_meleebook_name->[MeleeSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_meleebook_name->[ANYPAWN_nameIndef]'s [Books]: [MeleeSkill]</li>
+        <li>r_meleebook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [MeleeSkill]</li>
+        <li>r_meleebook_name->[Noun] and [MeleeSkill]</li>
+        <li>r_meleebook_name->[ConceptAny] and [MeleeSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  <!--======== Mining book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookMining</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_miningbook_name->[Books] of [maybe_adjective] [MiningSkill] </li>	
+		<li>r_miningbook_name->[AdjectiveBadass] [Books] of [MiningSkill]</li>	
+		<li>r_miningbook_name->[AdjectiveLarge] [Books] of [MiningSkill]</li>	
+		<li>r_miningbook_name->[PeopleBadass]'s [Books] of [MiningSkill]</li>
+		<li>r_miningbook_name->[Books] of [maybe_adjective] [MiningSkill]</li>	
+		<li>r_miningbook_name->[AdjectiveBadass] [Books] of [MiningSkill]</li>	
+		<li>r_miningbook_name->The [Adjective] [Noun]: History of	[MiningSkill]</li>
+        <!-- Numeric -->		
+		<li>r_miningbook_name->[MiningSkill] [Digit]</li>
+        <li>r_miningbook_name->[maybe_letter][Digit][maybe_letter]: [MiningSkill]</li>
+        <li>r_miningbook_name->[maybe_letter][Digit][Digit][maybe_letter]: [MiningSkill]</li>
+        <li>r_miningbook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [MiningSkill]</li>
+        <li>r_miningbook_name->[maybe_letter][RomanNumeral][maybe_letter]: [MiningSkill]</li>
+		<!-- Person -->
+		<li>r_miningbook_name->[ANYPAWN_nameIndef]'s [Books] of the [MiningSkill]</li>
+		<li>r_miningbook_name->[MiningSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_miningbook_name->[ANYPAWN_nameIndef]'s [Books]: [MiningSkill]</li>
+        <li>r_miningbook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [MiningSkill]</li>
+        <li>r_miningbook_name->[Noun] and [MiningSkill]</li>
+        <li>r_miningbook_name->[ConceptAny] and [MiningSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  
+  <!--======== Social book name ========-->
+
+  <RulePackDef>
+    <defName>VBE_NamerBookSocial</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <!-- General -->
+		<li>r_socialbook_name->[Books] of [maybe_adjective] [SocialSkill] </li>	
+		<li>r_socialbook_name->[AdjectiveBadass] [Books] of [SocialSkill]</li>	
+		<li>r_socialbook_name->[AdjectiveLarge] [Books] of [SocialSkill]</li>	
+		<li>r_socialbook_name->[PeopleBadass]'s [Books] of [SocialSkill]</li>
+		<li>r_socialbook_name->[Books] of [maybe_adjective] [SocialSkill]</li>	
+		<li>r_socialbook_name->[AdjectiveBadass] [Books] of the [Animal]</li>	
+		<li>r_socialbook_name->The [Adjective] [Noun]: History of [SocialSkill]</li>
+        <!-- Numeric -->		
+		<li>r_socialbook_name->[SocialSkill] [Digit]</li>
+        <li>r_socialbook_name->[maybe_letter][Digit][maybe_letter]: [SocialSkill]</li>
+        <li>r_socialbook_name->[maybe_letter][Digit][Digit][maybe_letter]: [SocialSkill]</li>
+        <li>r_socialbook_name->[maybe_letter][Digit][Digit][Digit][maybe_letter]: [SocialSkill]</li>
+        <li>r_socialbook_name->[maybe_letter][RomanNumeral][maybe_letter]: [SocialSkill]</li>
+		<!-- Person -->
+		<li>r_socialbook_name->[ANYPAWN_nameIndef]'s [Books] of the [SocialSkill]</li>
+		<li>r_socialbook_name->[SocialSkill] of [ANYPAWN_nameIndef]</li>
+        <li>r_socialbook_name->[ANYPAWN_nameIndef]'s [Books]: [SocialSkill]</li>
+        <li>r_socialbook_name->[maybe_a] [ANYPAWN_nameIndef] [Trans] [Color]: [SocialSkill]</li>
+        <li>r_socialbook_name->[Noun] and [SocialSkill]</li>
+        <li>r_socialbook_name->[ConceptAny] and [SocialSkill]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+  
+
+</Defs>
