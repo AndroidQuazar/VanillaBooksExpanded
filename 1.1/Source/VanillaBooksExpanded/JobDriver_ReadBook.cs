@@ -10,8 +10,8 @@ namespace VanillaBooksExpanded
 {
     public class JobDriver_ReadBook : JobDriver
     {
-        private float totalReadTicks => 1500;
-        private float curReadTicks = 0;
+        private float totalReadingTicks => 1000;
+        private float curReadingTicks = 0;
         private Book book => job.GetTarget(TargetIndex.A).Thing as Book;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
@@ -22,24 +22,16 @@ namespace VanillaBooksExpanded
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnDestroyedOrNull(TargetIndex.A);
-
-            var toilOpenBook = Toils_General.Wait(3);
             yield return Toils_Reserve.Reserve(TargetIndex.A);
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
-            yield return Toils_General.Wait(6).FailOnForbidden(TargetIndex.A)
-                .FailOnCannotTouch(TargetIndex.A, PathEndMode.Touch)
-                .WithProgressBarToilDelay(TargetIndex.A);
             pawn.CurJob.count = 1;
             yield return Toils_Haul.StartCarryThing(TargetIndex.A);
-
-            yield return FindSeatsForReading(pawn).FailOnForbidden(TargetIndex.B);
-            yield return Toils_Jump.JumpIfTargetDespawnedOrNull(TargetIndex.B, toilOpenBook);
-            yield return toilOpenBook;
-
+            yield return FindSeatsForReading(pawn).FailOnForbidden(TargetIndex.C);
 
             var toil = new Toil();
             toil.AddPreInitAction(() =>
             {
+                pawn.CurJob.targetB = new LocalTargetInfo(pawn.Position + pawn.Rotation.FacingCell);
                 if (pawn.carryTracker.CarriedThing is Book carriedBook)
                 {
                     book.stopDraw = true;
@@ -56,11 +48,11 @@ namespace VanillaBooksExpanded
                 {
                     var learnValue = book.GetLearnAmount();
                     Log.Message(pawn + " learn " + compBook.Props.bookData.skillToTeach + " (" 
-                        + learnValue + ") from " + book);
+                        + learnValue + ") from " + book + " - " + book.TryGetComp<CompQuality>().Quality);
                     actor.skills.Learn(compBook.Props.bookData.skillToTeach, learnValue);
                 }
-                curReadTicks++;
-                if (curReadTicks > totalReadTicks)
+                curReadingTicks++;
+                if (curReadingTicks > totalReadingTicks)
                 {
                     if (pawn.carryTracker.CarriedThing is Book carriedBook)
                     {
@@ -92,7 +84,7 @@ namespace VanillaBooksExpanded
                 }
                 JoyUtility.TryGainRecRoomThought(pawn);
             });
-            toil.WithEffect(book.BookData.readingEffecter, TargetIndex.A);
+            toil.WithEffect(() => book.BookData.readingEffecter, () => TargetB);
             toil.defaultCompleteMode = ToilCompleteMode.Never;
             yield return toil;
         }
@@ -104,9 +96,9 @@ namespace VanillaBooksExpanded
             {
                 if (p.CanReserve(thing))
                 {
-                    p.CurJob.targetB = thing;
+                    p.CurJob.targetC = thing;
                     p.Reserve(thing, p.CurJob);
-                    var toil = Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.OnCell);
+                    var toil = Toils_Goto.GotoThing(TargetIndex.C, PathEndMode.OnCell);
                     return toil;
                 }
             }

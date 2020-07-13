@@ -18,9 +18,10 @@ namespace VanillaBooksExpanded
 		{
 			if (interactMote == null)
 			{
+				Log.Message("Spawn mote at " + B.Cell);
 				interactMote = (Mote)ThingMaker.MakeThing(def.moteDef);
-				interactMote.exactPosition = A.Cell.ToVector3();
-				GenSpawn.Spawn(interactMote, A.Cell, A.Map);
+				interactMote.exactPosition = B.Cell.ToVector3Shifted();
+				GenSpawn.Spawn(interactMote, B.Cell, A.Map);
 			}
 		}
 

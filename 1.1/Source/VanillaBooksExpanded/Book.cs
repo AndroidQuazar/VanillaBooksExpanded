@@ -116,6 +116,12 @@ namespace VanillaBooksExpanded
                 return this.TryGetComp<CompBook>()?.Props.bookData;
             }
         }
+
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look<bool>(ref this.stopDraw, "stopDraw", false);
+        }
     }
 }
 
