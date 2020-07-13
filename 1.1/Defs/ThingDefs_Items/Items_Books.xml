@@ -55,6 +55,18 @@
 			<nameMaker>VBE_NamerBookShooting</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Shooting</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Shooting</skillToTeach>
+				<readingEffecter>VBE_ReadingShootingBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>
@@ -73,6 +85,18 @@
 			<nameMaker>VBE_NamerBookAnimals</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Animals</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Animals</skillToTeach>
+				<readingEffecter>VBE_ReadingAnimalsBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>
@@ -91,6 +115,18 @@
 			<nameMaker>VBE_NamerBookArt</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Art</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Artistic</skillToTeach>
+				<readingEffecter>VBE_ReadingArtisticBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>
@@ -109,13 +145,25 @@
 			<nameMaker>VBE_NamerBookConstruction</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Construction</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Construction</skillToTeach>
+				<readingEffecter>VBE_ReadingConstructionngBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
   </ThingDef>
-  
+
   <ThingDef ParentName="VBE_BookBase">
     <defName>VBE_BookCooking</defName>
     <label>book cooking</label>
@@ -127,6 +175,18 @@
 			<nameMaker>VBE_NamerBookCooking</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Cooking</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Cooking</skillToTeach>
+				<readingEffecter>VBE_ReadingCookingBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>
@@ -145,6 +205,18 @@
 			<nameMaker>VBE_NamerBookCrafting</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Crafting</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Crafting</skillToTeach>
+				<readingEffecter>VBE_ReadingCraftingBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>
@@ -163,6 +235,18 @@
 			<nameMaker>VBE_NamerBookIntellectual</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Intellectual</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Intellectual</skillToTeach>
+				<readingEffecter>VBE_ReadingIntellectualBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>
@@ -181,6 +265,18 @@
 			<nameMaker>VBE_NamerBookMedical</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Medical</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Medical</skillToTeach>
+				<readingEffecter>VBE_ReadingMedicalBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>
@@ -199,6 +295,18 @@
 			<nameMaker>VBE_NamerBookMelee</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Melee</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Melee</skillToTeach>
+				<readingEffecter>VBE_ReadingMeleeBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>
@@ -217,6 +325,18 @@
 			<nameMaker>VBE_NamerBookMining</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Mining</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Mining</skillToTeach>
+				<readingEffecter>VBE_ReadingMiningBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>
@@ -235,6 +355,18 @@
 			<nameMaker>VBE_NamerBookGrowing</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Growing</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Growing</skillToTeach>
+				<readingEffecter>VBE_ReadingGrowingBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>
@@ -253,6 +385,18 @@
 			<nameMaker>VBE_NamerBookSocial</nameMaker>
 			<descriptionMaker>VBE_BookDescription_Social</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
+			<bookData>
+				<skillToTeach>Social</skillToTeach>
+				<readingEffecter>VBE_ReadingSocialBookEffecter</readingEffecter>
+				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.5</Poor>
+				<Normal>1</Normal>
+				<Good>1.2</Good>
+				<Excellent>1.4</Excellent>
+				<Masterwork>1.8</Masterwork>
+				<Legendary>2</Legendary>
+			</bookData>
 		</li>
 		<li>
 			<compClass>CompQuality</compClass>

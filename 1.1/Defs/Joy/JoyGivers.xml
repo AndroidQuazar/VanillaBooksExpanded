@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JoyGiverDef>
+    <defName>VBE_ReadBook</defName>
+    <giverClass>VanillaBooksExpanded.JoyGiver_ReadBook</giverClass>
+    <baseChance>1</baseChance>
+    <jobDef>VBE_ReadBook</jobDef>
+    <joyKind>VBE_Reading</joyKind>
+    <requiredCapacities>
+      <li>Sight</li>
+    </requiredCapacities>
+  </JoyGiverDef>
+  
+</Defs>

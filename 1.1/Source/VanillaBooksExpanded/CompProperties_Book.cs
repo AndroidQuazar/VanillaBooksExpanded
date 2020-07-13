@@ -19,6 +19,7 @@ namespace VanillaBooksExpanded
 
 		public string rulesStringDescription;
 
+		public BookData bookData;
 		public CompProperties_Book()
 		{
 			compClass = typeof(CompBook);

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <JobDef>
+    <defName>VBE_ReadBook</defName>
+    <driverClass>VanillaBooksExpanded.JobDriver_ReadBook</driverClass>
+    <reportString>reading.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyKind>VBE_Reading</joyKind>
+  </JobDef>
+
+</Defs>

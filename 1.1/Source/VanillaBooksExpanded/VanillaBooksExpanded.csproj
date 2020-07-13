@@ -293,6 +293,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BookData.cs" />
+    <Compile Include="JobDriver_ReadBook.cs" />
+    <Compile Include="JoyGiver_ReadBook.cs" />
+    <Compile Include="SubEffecter_ReadingBookSymbol.cs" />
     <Compile Include="TaleBookReference.cs" />
     <Compile Include="TaleTextGenerator.cs" />
     <Compile Include="ITab_Book.cs" />
@@ -300,6 +304,7 @@
     <Compile Include="CompBook.cs" />
     <Compile Include="Book.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VanillaBooksExpandedDefOf.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
