@@ -16,8 +16,6 @@ namespace VanillaBooksExpanded
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
-            Log.Message("book: " + TargetA);
-            Log.Message("book: " + TargetB);
             return pawn.Reserve(book, job, errorOnFailed: errorOnFailed);
         }
 
@@ -70,6 +68,7 @@ namespace VanillaBooksExpanded
                 {
                     book.stopDraw = false;
                 }
+
                 JoyUtility.TryGainRecRoomThought(pawn);
             });
             toil.WithEffect(() => book.BookData.readingEffecter, () => TargetA);

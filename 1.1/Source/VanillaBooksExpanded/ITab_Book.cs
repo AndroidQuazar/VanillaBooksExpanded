@@ -39,11 +39,10 @@ namespace VanillaBooksExpanded
 				return false;
 			}
 		}
-
 		public ITab_Book()
 		{
 			size = WinSize;
-			labelKey = "VBE.Book".Translate();
+			labelKey = "VBE.Book";
 			tutorTag = "Art";
 		}
 
