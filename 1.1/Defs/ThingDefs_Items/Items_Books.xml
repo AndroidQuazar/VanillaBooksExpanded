@@ -14,7 +14,7 @@
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
 		<MaxHitPoints>100</MaxHitPoints>
-		<WorkToMake>34000</WorkToMake>
+		<WorkToMake>134000</WorkToMake>
 		<Mass>0.5</Mass>
 		<Beauty>5</Beauty>
 		<Flammability>1.0</Flammability>
@@ -61,11 +61,11 @@
 				<readingEffecter>VBE_ReadingShootingBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
@@ -94,11 +94,11 @@
 				<readingEffecter>VBE_ReadingAnimalsBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
@@ -127,11 +127,11 @@
 				<readingEffecter>VBE_ReadingArtisticBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
@@ -160,11 +160,11 @@
 				<readingEffecter>VBE_ReadingConstructionngBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
@@ -193,11 +193,11 @@
 				<readingEffecter>VBE_ReadingCookingBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
@@ -226,11 +226,11 @@
 				<readingEffecter>VBE_ReadingCraftingBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
@@ -259,11 +259,11 @@
 				<readingEffecter>VBE_ReadingIntellectualBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
@@ -292,11 +292,11 @@
 				<readingEffecter>VBE_ReadingMedicalBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
@@ -325,11 +325,11 @@
 				<readingEffecter>VBE_ReadingMeleeBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
@@ -358,11 +358,11 @@
 				<readingEffecter>VBE_ReadingMiningBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
@@ -391,11 +391,11 @@
 				<readingEffecter>VBE_ReadingGrowingBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
@@ -424,11 +424,11 @@
 				<readingEffecter>VBE_ReadingSocialBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
-				<Poor>0.5</Poor>
-				<Normal>1</Normal>
-				<Good>1.2</Good>
-				<Excellent>1.4</Excellent>
-				<Masterwork>1.8</Masterwork>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
 				<Legendary>2</Legendary>
 			</bookData>
 		</li>
