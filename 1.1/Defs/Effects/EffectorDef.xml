@@ -17,9 +17,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
 			<texPath>Things/Motes/BookShooting_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 
@@ -39,9 +41,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
 			<texPath>Things/Motes/BookAnimals_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 
@@ -62,9 +66,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
 			<texPath>Things/Motes/BookArtistic_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 
@@ -84,9 +90,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
 			<texPath>Things/Motes/BookConstruction_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 
@@ -107,9 +115,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
 			<texPath>Things/Motes/BookCooking_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 
@@ -130,9 +140,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
 			<texPath>Things/Motes/BookCrafting_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 
@@ -153,9 +165,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
 			<texPath>Things/Motes/BookIntellectual_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 
@@ -176,9 +190,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
 			<texPath>Things/Motes/BookMedical_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 
@@ -199,9 +215,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
 			<texPath>Things/Motes/BookMelee_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 
@@ -221,9 +239,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
 			<texPath>Things/Motes/BookMining_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 
@@ -243,9 +263,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
-			<texPath>Things/Motes/BookGrowing_Reading</texPath>
+			<texPath>Things/Motes/BookPlants_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 
@@ -265,9 +287,11 @@
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
 		</mote>
 		<graphicData>
 			<texPath>Things/Motes/BookSocial_Reading</texPath>
+			<drawSize>0.8</drawSize>
 		</graphicData>
 	</ThingDef>
 

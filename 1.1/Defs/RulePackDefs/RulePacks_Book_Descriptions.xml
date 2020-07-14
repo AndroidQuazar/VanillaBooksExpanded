@@ -2,13 +2,14 @@
 <Defs>
 
   <RulePackDef>
-    <defName>VBE_BookDescription_Shooting</defName>
+    <defName>ArtDescription_BookShooting</defName>
     <include>
       <li>VBE_BookUtility</li>
+	  <li>ArtDescriptionUtility_Global</li>
     </include>
     <rulePack>
       <rulesStrings>
-		<li>r_shootingbook_desc->[cover] [first_chapters] [ShootingSkill][maybe_cont]. [middle_book] [ShootingSkill][maybe_cont]. [ending] [ShootingSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Studying this book increases the shooting skill.</li>
+		<li>physical_description_root->[ShootingSkill][maybe_cont]. [middle_book] [ShootingSkill][maybe_cont]. [ending] [ShootingSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Studying this book increases the shooting skill.</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

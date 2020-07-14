@@ -13,7 +13,7 @@
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
 		<MaxHitPoints>100</MaxHitPoints>
-		<MarketValue>160</MarketValue>
+		<WorkToMake>34000</WorkToMake>
 		<Mass>0.5</Mass>
 		<Beauty>5</Beauty>
 		<Flammability>1.0</Flammability>
@@ -26,7 +26,7 @@
       <li>VanillaBooksExpanded.ITab_Book</li>
     </inspectorTabs>
     <tradeTags>
-      <li>Art</li>
+      <li>Book</li>
     </tradeTags>
     <costList>
 		<Cloth>80</Cloth>
@@ -52,8 +52,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookShooting</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Shooting</descriptionMaker>
+			<nameMaker>ArtDescription_BookShootingName</nameMaker>
+			<descriptionMaker>ArtDescription_BookShootingDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Shooting</skillToTeach>
@@ -72,6 +72,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Shooting</workSkill>
+    </recipeMaker>
   </ThingDef>
   
   <ThingDef ParentName="VBE_BookBase">
@@ -82,8 +85,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookAnimals</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Animals</descriptionMaker>
+			<nameMaker>ArtDescription_BookAnimalsName</nameMaker>
+			<descriptionMaker>ArtDescription_BookAnimalsDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Animals</skillToTeach>
@@ -102,6 +105,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Animals</workSkill>
+    </recipeMaker>
   </ThingDef>
   
   <ThingDef ParentName="VBE_BookBase">
@@ -112,8 +118,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookArt</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Art</descriptionMaker>
+			<nameMaker>ArtDescription_BookArtName</nameMaker>
+			<descriptionMaker>ArtDescription_BookArtDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Artistic</skillToTeach>
@@ -132,6 +138,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Art</workSkill>
+    </recipeMaker>
   </ThingDef>
   
   <ThingDef ParentName="VBE_BookBase">
@@ -142,8 +151,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookConstruction</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Construction</descriptionMaker>
+			<nameMaker>ArtDescription_BookConstructionName</nameMaker>
+			<descriptionMaker>ArtDescription_BookConstructionDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Construction</skillToTeach>
@@ -162,6 +171,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Construction</workSkill>
+    </recipeMaker>
   </ThingDef>
 
   <ThingDef ParentName="VBE_BookBase">
@@ -172,8 +184,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookCooking</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Cooking</descriptionMaker>
+			<nameMaker>ArtDescription_BookCookingName</nameMaker>
+			<descriptionMaker>ArtDescription_BookCookingDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Cooking</skillToTeach>
@@ -192,6 +204,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Cooking</workSkill>
+    </recipeMaker>
   </ThingDef>
   
   <ThingDef ParentName="VBE_BookBase">
@@ -202,8 +217,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookCrafting</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Crafting</descriptionMaker>
+			<nameMaker>ArtDescription_BookCraftingName</nameMaker>
+			<descriptionMaker>ArtDescription_BookCraftingDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Crafting</skillToTeach>
@@ -222,6 +237,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
   </ThingDef>
   
   <ThingDef ParentName="VBE_BookBase">
@@ -232,8 +250,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookIntellectual</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Intellectual</descriptionMaker>
+			<nameMaker>ArtDescription_BookIntellectualName</nameMaker>
+			<descriptionMaker>ArtDescription_BookIntellectualDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Intellectual</skillToTeach>
@@ -252,6 +270,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Intellectual</workSkill>
+    </recipeMaker>
   </ThingDef>
   
   <ThingDef ParentName="VBE_BookBase">
@@ -262,8 +283,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookMedical</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Medical</descriptionMaker>
+			<nameMaker>ArtDescription_BookMedicalName</nameMaker>
+			<descriptionMaker>ArtDescription_BookMedicalDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Medical</skillToTeach>
@@ -282,6 +303,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Medicine</workSkill>
+    </recipeMaker>
   </ThingDef>
   
   <ThingDef ParentName="VBE_BookBase">
@@ -292,8 +316,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookMelee</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Melee</descriptionMaker>
+			<nameMaker>ArtDescription_BookMeleeName</nameMaker>
+			<descriptionMaker>ArtDescription_BookMeleeDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Melee</skillToTeach>
@@ -312,6 +336,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Melee</workSkill>
+    </recipeMaker>
   </ThingDef>
   
   <ThingDef ParentName="VBE_BookBase">
@@ -322,8 +349,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookMining</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Mining</descriptionMaker>
+			<nameMaker>ArtDescription_BookMiningName</nameMaker>
+			<descriptionMaker>ArtDescription_BookMiningDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Mining</skillToTeach>
@@ -342,6 +369,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Mining</workSkill>
+    </recipeMaker>
   </ThingDef>
   
   <ThingDef ParentName="VBE_BookBase">
@@ -352,8 +382,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookGrowing</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Growing</descriptionMaker>
+			<nameMaker>ArtDescription_BookGrowingName</nameMaker>
+			<descriptionMaker>ArtDescription_BookGrowingDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Growing</skillToTeach>
@@ -372,6 +402,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Plants</workSkill>
+    </recipeMaker>
   </ThingDef>
   
   <ThingDef ParentName="VBE_BookBase">
@@ -382,8 +415,8 @@
     </graphicData>
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
-			<nameMaker>VBE_NamerBookSocial</nameMaker>
-			<descriptionMaker>VBE_BookDescription_Social</descriptionMaker>
+			<nameMaker>ArtDescription_BookSocialName</nameMaker>
+			<descriptionMaker>ArtDescription_BookSocialDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Social</skillToTeach>
@@ -402,6 +435,9 @@
 			<compClass>CompQuality</compClass>
 		</li>
     </comps>
+    <recipeMaker>
+      <workSkill>Social</workSkill>
+    </recipeMaker>
   </ThingDef>
 
 </Defs>
