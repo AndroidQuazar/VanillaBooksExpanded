@@ -39,7 +39,7 @@ namespace VanillaBooksExpanded
                 pawn.GainComfortFromCellIfPossible();
                 JoyUtility.JoyTickCheckEnd(pawn, JoyTickFullJoyAction.EndJob);
             });
-            
+
             toil.tickAction = () =>
             {
                 Pawn actor = pawn;
@@ -47,8 +47,8 @@ namespace VanillaBooksExpanded
                 if (compBook != null && compBook.Props.bookData.skillToTeach != null)
                 {
                     var learnValue = book.GetLearnAmount();
-                    Log.Message(pawn + " learn " + compBook.Props.bookData.skillToTeach + " (" 
-                        + learnValue + ") from " + book + " - " + book.TryGetComp<CompQuality>().Quality);
+                    Log.Message(pawn + " learn " + compBook.Props.bookData.skillToTeach + " ("
+                        + learnValue + ") from " + book + " - " + book.TryGetComp<CompQuality>().Quality, true);
                     actor.skills.Learn(compBook.Props.bookData.skillToTeach, learnValue);
                 }
                 curReadingTicks++;
@@ -61,19 +61,37 @@ namespace VanillaBooksExpanded
                     ReadyForNextToil();
                 }
             };
-            
+
             toil.AddFinishAction(() =>
             {
                 if (pawn.carryTracker.CarriedThing is Book carriedBook)
                 {
                     book.stopDraw = false;
                 }
-
                 JoyUtility.TryGainRecRoomThought(pawn);
             });
             toil.WithEffect(() => book.BookData.readingEffecter, () => TargetA);
             toil.defaultCompleteMode = ToilCompleteMode.Never;
             yield return toil;
+            yield return new Toil
+            {
+                initAction = delegate ()
+                {
+                    Log.Message("Hauling", true);
+                    Thing thing = book;
+                    StoragePriority storagePriority = StoreUtility.CurrentStoragePriorityOf(thing);
+                    IntVec3 intVec;
+                    if (StoreUtility.TryFindBestBetterStoreCellFor(thing, this.pawn, base.Map, storagePriority, this.pawn.Faction, out intVec, true))
+                    {
+                        this.job.SetTarget(TargetIndex.C, intVec);
+                        this.job.SetTarget(TargetIndex.B, thing);
+                        this.job.count = thing.stackCount;
+                        return;
+                    }
+                    base.EndJobWith(JobCondition.Incompletable);
+                },
+                defaultCompleteMode = ToilCompleteMode.Instant
+            };
         }
 
         private static Toil FindSeatsForReading(Pawn p)
