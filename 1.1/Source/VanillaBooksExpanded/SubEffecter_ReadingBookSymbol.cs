@@ -10,7 +10,7 @@ namespace VanillaBooksExpanded
 {
     public class SubEffecter_BookSymbol : SubEffecter
     {
-		private Mote interactMote;
+		private MoteDualAttachedForBook interactMote;
 
 		public SubEffecter_BookSymbol(SubEffecterDef def, Effecter parent) : base(def, parent) { }
 
@@ -18,10 +18,12 @@ namespace VanillaBooksExpanded
 		{
 			if (interactMote == null)
 			{
-				Log.Message("Spawn mote at " + B.Cell);
-				interactMote = (Mote)ThingMaker.MakeThing(def.moteDef);
-				interactMote.exactPosition = B.Cell.ToVector3Shifted();
-				GenSpawn.Spawn(interactMote, B.Cell, A.Map);
+				Pawn pawn = A.Thing as Pawn;
+				new LocalTargetInfo();
+				interactMote = (MoteDualAttachedForBook)ThingMaker.MakeThing(def.moteDef);
+				interactMote.Attach(A, B);
+				interactMote.exactPosition = (pawn.Position + pawn.Rotation.FacingCell).ToVector3Shifted();
+				GenSpawn.Spawn(interactMote, pawn.Position + pawn.Rotation.FacingCell, pawn.Map);
 			}
 		}
 

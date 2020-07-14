@@ -8,6 +8,7 @@
       <drawSize>1</drawSize>
     </graphicData>
 	<thingClass>VanillaBooksExpanded.Book</thingClass>
+	<tickerType>Normal</tickerType>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <socialPropernessMatters>true</socialPropernessMatters>

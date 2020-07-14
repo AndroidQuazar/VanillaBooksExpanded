@@ -12,26 +12,28 @@ namespace VanillaBooksExpanded
     {
         private float totalReadingTicks => 1000;
         private float curReadingTicks = 0;
-        private Book book => job.GetTarget(TargetIndex.A).Thing as Book;
+        private Book book => job.GetTarget(TargetIndex.B).Thing as Book;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
+            Log.Message("book: " + TargetA);
+            Log.Message("book: " + TargetB);
             return pawn.Reserve(book, job, errorOnFailed: errorOnFailed);
         }
 
         protected override IEnumerable<Toil> MakeNewToils()
         {
-            this.FailOnDestroyedOrNull(TargetIndex.A);
-            yield return Toils_Reserve.Reserve(TargetIndex.A);
-            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.Touch);
+            this.FailOnDestroyedOrNull(TargetIndex.B);
+            yield return Toils_Reserve.Reserve(TargetIndex.B);
+            yield return Toils_Goto.GotoThing(TargetIndex.B, PathEndMode.Touch);
             pawn.CurJob.count = 1;
-            yield return Toils_Haul.StartCarryThing(TargetIndex.A);
+            yield return Toils_Haul.StartCarryThing(TargetIndex.B);
             yield return FindSeatsForReading(pawn).FailOnForbidden(TargetIndex.C);
 
             var toil = new Toil();
             toil.AddPreInitAction(() =>
             {
-                pawn.CurJob.targetB = new LocalTargetInfo(pawn.Position + pawn.Rotation.FacingCell);
+                pawn.CurJob.targetA = pawn;
                 if (pawn.carryTracker.CarriedThing is Book carriedBook)
                 {
                     book.stopDraw = true;
@@ -56,18 +58,9 @@ namespace VanillaBooksExpanded
                 {
                     if (pawn.carryTracker.CarriedThing is Book carriedBook)
                     {
-                        Log.Message("TEST 1");
                         book.stopDraw = false;
                     }
-                    else
-                    {
-                        Log.Message("FAil 1");
-                    }
                     ReadyForNextToil();
-                }
-                else
-                {
-                    JoyUtility.JoyTickCheckEnd(pawn);
                 }
             };
             
@@ -75,16 +68,11 @@ namespace VanillaBooksExpanded
             {
                 if (pawn.carryTracker.CarriedThing is Book carriedBook)
                 {
-                    Log.Message("TEST 2");
                     book.stopDraw = false;
-                }
-                else
-                {
-                    Log.Message("FAil 2");
                 }
                 JoyUtility.TryGainRecRoomThought(pawn);
             });
-            toil.WithEffect(() => book.BookData.readingEffecter, () => TargetB);
+            toil.WithEffect(() => book.BookData.readingEffecter, () => TargetA);
             toil.defaultCompleteMode = ToilCompleteMode.Never;
             yield return toil;
         }

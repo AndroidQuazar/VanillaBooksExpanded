@@ -43,7 +43,7 @@ namespace VanillaBooksExpanded
 		public ITab_Book()
 		{
 			size = WinSize;
-			labelKey = "Book";
+			labelKey = "VBE.Book".Translate();
 			tutorTag = "Art";
 		}
 

@@ -13,7 +13,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingShootingBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
@@ -37,7 +37,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingAnimalsBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
@@ -62,7 +62,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingArtisticBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
@@ -86,7 +86,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingConstructionBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
@@ -111,7 +111,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingCookingBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
@@ -136,7 +136,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingCraftingBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
@@ -161,7 +161,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingIntellectualBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
@@ -186,7 +186,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingMedicalBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
@@ -211,7 +211,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingMeleeBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
@@ -235,7 +235,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingMiningBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
@@ -259,7 +259,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingGrowingBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>
@@ -283,7 +283,7 @@
 
 	<ThingDef ParentName="MoteBase">
 		<defName>VBE_ReadingSocialBook</defName>
-		<thingClass>MoteDualAttached</thingClass>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
 		<altitudeLayer>MetaOverlays</altitudeLayer>
 		<mote>
 			<solidTime>600</solidTime>

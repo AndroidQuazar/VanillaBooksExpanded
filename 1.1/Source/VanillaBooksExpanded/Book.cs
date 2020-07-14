@@ -18,7 +18,11 @@ namespace VanillaBooksExpanded
             if (!respawningAfterLoad)
             {
                 var comp = this.TryGetComp<CompBook>();
-                comp.InitializeBook();
+                if (!comp.Active)
+                {
+                    Log.Message("Initialize book");
+                    comp.InitializeBook();
+                }
             }
         }
 
@@ -29,6 +33,12 @@ namespace VanillaBooksExpanded
             {
                 base.DrawAt(drawLoc, flip);
             }
+        }
+
+        public override void Tick()
+        {
+            base.Tick();
+            //Log.Message(this + " - " + this.GetHashCode(), true);
         }
 
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn myPawn)
@@ -44,7 +54,7 @@ namespace VanillaBooksExpanded
                 string label = "VBE.ReadBook".Translate();
                 Action action = delegate ()
                 {
-                    Job job = JobMaker.MakeJob(VanillaBooksExpandedDefOf.VBE_ReadBook, this);
+                    Job job = JobMaker.MakeJob(VanillaBooksExpandedDefOf.VBE_ReadBook, null, this);
                     job.count = 1;
                     myPawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                 };

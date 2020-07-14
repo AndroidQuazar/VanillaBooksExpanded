@@ -18,7 +18,7 @@ namespace VanillaBooksExpanded
             {
                 var book = bookCandidates.MaxBy(x => x.TryGetComp<CompQuality>().Quality);
                 Log.Message(pawn + " got " + book + " with quality " + book?.TryGetComp<CompQuality>().Quality);
-                Job job = JobMaker.MakeJob(def.jobDef, book);
+                Job job = JobMaker.MakeJob(def.jobDef, null, book);
                 job.count = 1;
                 return job;
             }
