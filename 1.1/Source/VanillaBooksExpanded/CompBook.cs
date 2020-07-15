@@ -44,6 +44,7 @@ namespace VanillaBooksExpanded
 
 		public void InitializeBook()
 		{
+			Log.Message("Initialize book");
 			if (taleRef != null)
 			{
 				taleRef.ReferenceDestroyed();

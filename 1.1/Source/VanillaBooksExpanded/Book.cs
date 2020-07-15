@@ -15,12 +15,12 @@ namespace VanillaBooksExpanded
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
+            this.stopDraw = false;
             if (!respawningAfterLoad)
             {
                 var comp = this.TryGetComp<CompBook>();
                 if (!comp.Active)
                 {
-                    Log.Message("Initialize book");
                     comp.InitializeBook();
                 }
             }

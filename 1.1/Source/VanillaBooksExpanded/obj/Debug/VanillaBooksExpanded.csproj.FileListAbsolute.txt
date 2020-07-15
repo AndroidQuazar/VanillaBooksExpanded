@@ -2,3 +2,4 @@ D:\GAMES\RimWorld\Mods\VanillaBooksExpanded\1.1\Assemblies\VanillaBooksExpanded.
 D:\GAMES\RimWorld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csprojAssemblyReference.cache
 D:\GAMES\RimWorld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csproj.CoreCompileInputs.cache
 D:\GAMES\RimWorld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.dll
+D:\GAMES\RimWorld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csproj.CopyComplete

@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="0Harmony">
+      <HintPath>..\..\..\..\..\..\..\Files\devmods\SourceDLLs\0Harmony.dll</HintPath>
+    </Reference>
     <Reference Include="Assembly-CSharp">
       <HintPath>..\..\..\..\..\..\..\Files\devmods\SourceDLLs\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
@@ -298,6 +301,7 @@
     <Compile Include="JoyGiver_ReadBook.cs" />
     <Compile Include="SubEffecter_ReadingBookSymbol.cs" />
     <Compile Include="TaleBookReference.cs" />
+    <Compile Include="SetAuthorName.cs" />
     <Compile Include="TaleTextGenerator.cs" />
     <Compile Include="ITab_Book.cs" />
     <Compile Include="CompProperties_Book.cs" />
