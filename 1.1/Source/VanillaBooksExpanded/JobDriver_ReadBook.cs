@@ -107,7 +107,6 @@ namespace VanillaBooksExpanded
                     return toil;
                 }
             }
-            p.CurJob.targetB = null;
             return new Toil();
         }
     }
