@@ -96,8 +96,9 @@ namespace VanillaBooksExpanded
 
         private static Toil FindSeatsForReading(Pawn p)
         {
-            foreach (var thing in p.Map.listerThings.AllThings.Where(x => x.def?.building?.isSittable ?? false)
-                        .OrderByDescending(y => y.def.GetStatValueAbstract(StatDefOf.Comfort)).ToList())
+            foreach (var thing in p.Map?.listerThings?.AllThings?
+                    .Where(x => x.def?.building?.isSittable ?? false)?
+                    .OrderByDescending(y => y.def.GetStatValueAbstract(StatDefOf.Comfort)).ToList())
             {
                 if (p.CanReserve(thing))
                 {
