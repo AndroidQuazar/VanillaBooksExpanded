@@ -14,7 +14,7 @@
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
 		<MaxHitPoints>100</MaxHitPoints>
-		<WorkToMake>134000</WorkToMake>
+		<WorkToMake>334000</WorkToMake>
 		<Mass>0.5</Mass>
 		<Beauty>5</Beauty>
 		<Flammability>1.0</Flammability>
@@ -30,7 +30,7 @@
       <li>Book</li>
     </tradeTags>
     <costList>
-		<Cloth>80</Cloth>
+		<Cloth>75</Cloth>
     </costList>
     <recipeMaker>
       <workSpeedStat>ResearchSpeed</workSpeedStat>
