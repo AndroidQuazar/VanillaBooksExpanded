@@ -39,9 +39,6 @@
     <hasInteractionCell>True</hasInteractionCell>
     <interactionCellOffset>(0,0,-1)</interactionCellOffset>
     <surfaceType>Item</surfaceType>
-    <recipes>
-      <li>VBE_WriteShootingBook</li>
-    </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
     </inspectorTabs>
@@ -106,9 +103,6 @@
         </li>
         <li Class="CompProperties_Breakdownable"/>
     </comps>
-    <recipes>
-      <li>Make_Wort</li>
-    </recipes>
     <inspectorTabs>
       <li>ITab_Bills</li>
     </inspectorTabs>

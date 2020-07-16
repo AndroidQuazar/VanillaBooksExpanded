@@ -14,7 +14,7 @@
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
 		<MaxHitPoints>100</MaxHitPoints>
-		<WorkToMake>33400</WorkToMake>
+		<WorkToMake>3340</WorkToMake>
 		<Mass>0.5</Mass>
 		<Beauty>5</Beauty>
 		<Flammability>1.0</Flammability>
@@ -140,7 +140,7 @@
 		</li>
     </comps>
     <recipeMaker>
-      <workSkill>Art</workSkill>
+      <workSkill>Artistic</workSkill>
     </recipeMaker>
   </ThingDef>
   
@@ -157,7 +157,7 @@
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
 				<skillToTeach>Construction</skillToTeach>
-				<readingEffecter>VBE_ReadingConstructionngBookEffecter</readingEffecter>
+				<readingEffecter>VBE_ReadingConstructionBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
 				<Poor>0.3</Poor>
@@ -288,7 +288,7 @@
 			<descriptionMaker>ArtDescription_BookMedicalDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
-				<skillToTeach>Medical</skillToTeach>
+				<skillToTeach>Medicine</skillToTeach>
 				<readingEffecter>VBE_ReadingMedicalBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
@@ -387,7 +387,7 @@
 			<descriptionMaker>ArtDescription_BookGrowingDesc</descriptionMaker>
 			<minQualityForArtistic>Poor</minQualityForArtistic>
 			<bookData>
-				<skillToTeach>Growing</skillToTeach>
+				<skillToTeach>Plants</skillToTeach>
 				<readingEffecter>VBE_ReadingGrowingBookEffecter</readingEffecter>
 				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
 				<Awful>0.1</Awful>
