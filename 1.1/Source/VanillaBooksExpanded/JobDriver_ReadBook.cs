@@ -43,13 +43,20 @@ namespace VanillaBooksExpanded
             toil.tickAction = () =>
             {
                 Pawn actor = pawn;
-                var compBook = book.TryGetComp<CompBook>();
-                if (compBook != null && compBook.Props.bookData.skillToTeach != null)
+                if (book is SkillBook skillBook)
                 {
-                    var learnValue = book.GetLearnAmount();
-                    Log.Message(pawn + " learn " + compBook.Props.bookData.skillToTeach + " ("
-                        + learnValue + ") from " + book + " - " + book.TryGetComp<CompQuality>().Quality, true);
-                    actor.skills.Learn(compBook.Props.bookData.skillToTeach, learnValue);
+                    var compBook = skillBook.TryGetComp<CompBook>();
+                    if (compBook != null && compBook.Props.skillData.skillToTeach != null)
+                    {
+                        var learnValue = skillBook.GetLearnAmount();
+                        Log.Message(pawn + " learn " + compBook.Props.skillData.skillToTeach + " ("
+                            + learnValue + ") from " + book + " - " + book.TryGetComp<CompQuality>().Quality, true);
+                        actor.skills.Learn(compBook.Props.skillData.skillToTeach, learnValue);
+                    }
+                }
+                if (book.Props.joyAmountPerTick > 0)
+                {
+                    pawn.needs.joy.GainJoy(book.Props.joyAmountPerTick, VBE_DefOf.VBE_Reading);
                 }
                 curReadingTicks++;
                 if (curReadingTicks > totalReadingTicks)
@@ -70,7 +77,7 @@ namespace VanillaBooksExpanded
                 }
                 JoyUtility.TryGainRecRoomThought(pawn);
             });
-            toil.WithEffect(() => book.BookData.readingEffecter, () => TargetA);
+            toil.WithEffect(() => book.Props.readingEffecter, () => TargetA);
             toil.defaultCompleteMode = ToilCompleteMode.Never;
             yield return toil;
             yield return new Toil

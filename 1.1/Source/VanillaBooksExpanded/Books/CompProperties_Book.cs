@@ -11,6 +11,10 @@ namespace VanillaBooksExpanded
 
 		public QualityCategory minQualityForArtistic;
 
+		public EffecterDef readingEffecter;
+
+		public float joyAmountPerTick;
+
 		public bool mustBeFullGrave;
 
 		public bool canBeEnjoyedAsArt;
@@ -19,7 +23,7 @@ namespace VanillaBooksExpanded
 
 		public string rulesStringDescription;
 
-		public BookData bookData;
+		public SkillData skillData;
 		public CompProperties_Book()
 		{
 			compClass = typeof(CompBook);

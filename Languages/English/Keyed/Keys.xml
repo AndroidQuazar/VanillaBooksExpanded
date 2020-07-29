@@ -4,5 +4,9 @@
 
 	<VBE.Book>Book</VBE.Book>
 	<VBE.ReadBook>Read book</VBE.ReadBook>
+	
+	<VBE.ReadNewsPaper>Read newspaper</VBE.ReadNewsPaper>
+	<VBE.NewspaperRelevantUntil>Relevant until: </VBE.NewspaperRelevantUntil>
+	<VBE.CantReadNewsPaperExpired>Nothing useful to read, the newspaper is out of date</VBE.CantReadNewsPaperExpired>
 
 </LanguageData>

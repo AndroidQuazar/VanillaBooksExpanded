@@ -10,7 +10,7 @@
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1</drawSize>
     </graphicData>
-	<tickerType>Normal</tickerType>
+	<thingClass>VanillaBooksExpanded.Newspaper</thingClass>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <socialPropernessMatters>true</socialPropernessMatters>
@@ -27,22 +27,8 @@
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
 			<nameMaker>ArtDescription_Newspaper</nameMaker>
 			<descriptionMaker>ArtDescription_NewspaperDesc</descriptionMaker>
-			<minQualityForArtistic>Poor</minQualityForArtistic>
-			<bookData>
-				<skillToTeach>Shooting</skillToTeach>
-				<readingEffecter>VBE_ReadingNewspaperEffecter</readingEffecter>
-				<baseGainedXPper1Tick>10</baseGainedXPper1Tick>
-				<Awful>0.1</Awful>
-				<Poor>0.3</Poor>
-				<Normal>0.5</Normal>
-				<Good>0.8</Good>
-				<Excellent>1.0</Excellent>
-				<Masterwork>1.5</Masterwork>
-				<Legendary>2</Legendary>
-			</bookData>
-		</li>
-		<li>
-			<compClass>CompQuality</compClass>
+			<joyAmountPerTick>10</joyAmountPerTick>
+			<readingEffecter>VBE_ReadingNewspaperEffecter</readingEffecter>
 		</li>
     </comps>
     <thingCategories>

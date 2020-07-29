@@ -10,37 +10,8 @@ using Verse.AI;
 
 namespace VanillaBooksExpanded
 {
-    public class Book : ThingWithComps
+    public class SkillBook : Book
     {
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            base.SpawnSetup(map, respawningAfterLoad);
-            this.stopDraw = false;
-            if (!respawningAfterLoad)
-            {
-                var comp = this.TryGetComp<CompBook>();
-                if (!comp.Active)
-                {
-                    comp.InitializeBook();
-                }
-            }
-        }
-
-        public bool stopDraw = false;
-        public override void DrawAt(Vector3 drawLoc, bool flip = false)
-        {
-            if (!stopDraw)
-            {
-                base.DrawAt(drawLoc, flip);
-            }
-        }
-
-        public override void Tick()
-        {
-            base.Tick();
-            //Log.Message(this + " - " + this.GetHashCode(), true);
-        }
-
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn myPawn)
         {
             if (!ReachabilityUtility.CanReach(myPawn, this, PathEndMode.InteractionCell, Danger.Deadly, false, 0))
@@ -54,7 +25,7 @@ namespace VanillaBooksExpanded
                 string label = "VBE.ReadBook".Translate();
                 Action action = delegate ()
                 {
-                    Job job = JobMaker.MakeJob(VanillaBooksExpandedDefOf.VBE_ReadBook, null, this);
+                    Job job = JobMaker.MakeJob(VBE_DefOf.VBE_ReadBook, null, this);
                     job.count = 1;
                     myPawn.jobs.TryTakeOrderedJob(job, JobTag.Misc);
                 };
@@ -68,7 +39,7 @@ namespace VanillaBooksExpanded
 
         public bool CanLearnFromBook(Pawn pawn)
         {
-            int skillLevel = pawn.skills.GetSkill(BookData.skillToTeach).Level;
+            int skillLevel = pawn.skills.GetSkill(SkillData.skillToTeach).Level;
             
             switch (this.TryGetComp<CompQuality>().Quality)
             {
@@ -96,19 +67,19 @@ namespace VanillaBooksExpanded
             switch (this.TryGetComp<CompQuality>().Quality)
             {
                 case QualityCategory.Awful:
-                    return BookData.Awful;
+                    return SkillData.Awful;
                 case QualityCategory.Poor:
-                    return BookData.Poor;
+                    return SkillData.Poor;
                 case QualityCategory.Normal:
-                    return BookData.Normal;
+                    return SkillData.Normal;
                 case QualityCategory.Good:
-                    return BookData.Good;
+                    return SkillData.Good;
                 case QualityCategory.Excellent:
-                    return BookData.Excellent;
+                    return SkillData.Excellent;
                 case QualityCategory.Masterwork:
-                    return BookData.Masterwork;
+                    return SkillData.Masterwork;
                 case QualityCategory.Legendary:
-                    return BookData.Legendary;
+                    return SkillData.Legendary;
                 default:
                     throw new ArgumentException();
             }
@@ -116,22 +87,9 @@ namespace VanillaBooksExpanded
 
         public float GetLearnAmount()
         {
-            return BookData.baseGainedXPper1Tick * GetLearnQuality();
+            return SkillData.baseGainedXPper1Tick * GetLearnQuality();
         }
 
-        public BookData BookData
-        {
-            get
-            {
-                return this.TryGetComp<CompBook>()?.Props.bookData;
-            }
-        }
-
-        public override void ExposeData()
-        {
-            base.ExposeData();
-            Scribe_Values.Look<bool>(ref this.stopDraw, "stopDraw", false);
-        }
     }
 }
 

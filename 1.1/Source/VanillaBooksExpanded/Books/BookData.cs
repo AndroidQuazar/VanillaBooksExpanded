@@ -5,10 +5,9 @@ using Verse;
 
 namespace VanillaBooksExpanded
 {
-    public class BookData
+    public class SkillData
     {
         public SkillDef skillToTeach;
-        public EffecterDef readingEffecter;
         public float baseGainedXPper1Tick;
         public float Awful;
         public float Poor;

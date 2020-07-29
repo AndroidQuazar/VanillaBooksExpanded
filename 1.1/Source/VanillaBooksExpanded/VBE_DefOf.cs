@@ -9,9 +9,11 @@ using Verse.Sound;
 namespace VanillaBooksExpanded
 {
 	[DefOf]
-	public static class VanillaBooksExpandedDefOf
+	public static class VBE_DefOf
 	{
 		public static JobDef VBE_ReadBook;
+
+		public static JoyKindDef VBE_Reading;
 	}
 }
 
