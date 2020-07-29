@@ -2,6 +2,31 @@
 <Defs>
 
 	<EffecterDef>
+		<defName>VBE_ReadingNewspaperEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingNewspaper</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingNewspaper</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/Newspaper_Reading</texPath>
+			<drawSize>1</drawSize>
+		</graphicData>
+	</ThingDef>
+
+
+	<EffecterDef>
 		<defName>VBE_ReadingShootingBookEffecter</defName>
 		<children>
 			<li>

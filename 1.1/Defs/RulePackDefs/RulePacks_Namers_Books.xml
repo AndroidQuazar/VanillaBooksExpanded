@@ -1,6 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
+  <!--======== Newspaper name ========-->
+
+  <RulePackDef>
+    <defName>ArtDescription_Newspaper</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+      <li>ArtNameUtility</li>
+	  <li>OutlanderPlaceNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<!-- Location -->
+		<li>r_art_name->[Newspapers] of [nearnameinitial] [political_union_outlander]</li>	
+		<li>r_art_name->[Newspapers] of [nearnameinitial] [political_adjective] [political_union_outlander]</li>	
+		<li>r_art_name->[Newspapers] of [political_union_outlander] of [nearnameinitial]</li>	
+		<li>r_art_name->[PeopleBadass]'s [Newspapers]</li>
+		<li>r_art_name->[Newspapers] of [PlaceOutlander]</li>	
+		<li>r_art_name->[Newspapers] of [Direction] [PlaceOutlander]</li>	
+        <!-- Numeric -->		
+		<li>r_art_name->[Newspapers] [Digit]</li>
+        <li>r_art_name->[Newspapers] [maybe_letter][Digit][maybe_letter]</li>
+        <li>r_art_name->[Newspapers] [maybe_letter][Digit][Digit][maybe_letter]</li>
+        <li>r_art_name->[Newspapers] [maybe_letter][Digit][Digit][Digit][maybe_letter]</li>
+        <li>r_art_name->[Newspapers] [maybe_letter][RomanNumeral][maybe_letter]</li>
+		<!-- Person -->
+		<li>r_art_name->[ANYPAWN_nameIndef]'s [Newspapers]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>ArtDescription_NewspaperDesc</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+      <li>ArtNameUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_art_name->context_newspaper</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+
   <!--======== Shooting book name ========-->
 
   <RulePackDef>

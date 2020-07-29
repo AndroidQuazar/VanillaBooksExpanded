@@ -149,6 +149,18 @@
 		<li>inspired->Based heavily on the book titled</li>
 		<li>inspired->In order to contradict the statement in</li>
 		
+		<!-- newspaper -->
+        <li>context_newspaper->This [newspaper] goes indepth about the [tale_noun] on [DATE].</li>
+        <li>context_newspaper->This [newspaper] relates to [tale_noun] on [DATE].</li>
+        <li>context_newspaper->This [newspaper] tells the story of [tale_noun] on [DATE].</li>
+		<li>context_newspaper->This [newspaper] is about [tale_noun] on [DATE].</li>
+		<li>context_newspaper->This [newspaper] informs the reader about [tale_noun] on [DATE].</li>
+		
+		<li>newspaper->newspaper</li>
+		<li>newspaper->paper</li>
+		<li>newspaper->article</li>
+		<li>newspaper->magazine</li>
+		
 		<!-- another shooting book -->
 		<li>ShootingBook->[Books] of [maybe_adjective] [ShootingSkill]</li>	
 		<li>ShootingBook->[AdjectiveBadass] [Books] of [ShootingSkill]</li>	
@@ -406,6 +418,7 @@
 		<li>MiningSkill->Words/BookWords/MiningSkill</li>
 		<li>SocialSkill->Words/BookWords/SocialSkill</li>
 		<li>Books->Words/BookWords/Books</li>
+		<li>Newspapers->Words/BookWords/Newspapers</li>
       </rulesFiles>
 	   </rulePack>
 	  </RulePackDef>
