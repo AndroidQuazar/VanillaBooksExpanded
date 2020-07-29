@@ -9,4 +9,14 @@
 	<VBE.NewspaperRelevantUntil>Relevant until: </VBE.NewspaperRelevantUntil>
 	<VBE.CantReadNewsPaperExpired>Nothing useful to read, the newspaper is out of date</VBE.CantReadNewsPaperExpired>
 
+	<VBE.ReadBlueprint>Read blueprint</VBE.ReadBlueprint>
+	<VBE.CantReadBlueprintAlreadyResearched>Cant read blueprint, already researched</VBE.CantReadBlueprintAlreadyResearched>
+	<VBE.CantReadBlueprintTooAdvanced>Cant read blueprint, too advanced</VBE.CantReadBlueprintTooAdvanced>
+	<VBE.CantReadBlueprintUsed>Cant read blueprint, already used</VBE.CantReadBlueprintUsed>
+
+	<VBE.ReadMap>Read map</VBE.ReadMap>
+	<VBE.CantReadMapUsed>Cant read map, already</VBE.CantReadMapUsed>
+	<VBE.LocationsOpened>Location opened</VBE.LocationsOpened>
+	<VBE.LocationsOpenedDesc>Location opened</VBE.LocationsOpenedDesc>
+	
 </LanguageData>

@@ -31,8 +31,7 @@ namespace VanillaBooksExpanded
                     // newspapers
                     var newspapers = bookCandidates.Where(b => b is Newspaper newspaper
                     && pawn.CanReserveAndReach(newspaper, PathEndMode.Touch, Danger.Deadly)
-                    && newspaper.expireTime > Find.TickManager.TicksAbs);
-
+                    && GenDate.DaysPassedAt(newspaper.expireTime) >= GenDate.DaysPassedAt(Find.TickManager.TicksAbs));
                     if (newspapers.Count() > 0)
                     {
                         var book = newspapers.RandomElement();

@@ -54,8 +54,10 @@ namespace VanillaBooksExpanded
                         actor.skills.Learn(compBook.Props.skillData.skillToTeach, learnValue);
                     }
                 }
+
                 if (book.Props.joyAmountPerTick > 0)
                 {
+                    Log.Message(pawn + " gaining joy " + book.Props.joyAmountPerTick, true);
                     pawn.needs.joy.GainJoy(book.Props.joyAmountPerTick, VBE_DefOf.VBE_Reading);
                 }
                 curReadingTicks++;
@@ -68,15 +70,6 @@ namespace VanillaBooksExpanded
                     ReadyForNextToil();
                 }
             };
-
-            toil.AddFinishAction(() =>
-            {
-                if (pawn.carryTracker.CarriedThing is Book carriedBook)
-                {
-                    book.stopDraw = false;
-                }
-                JoyUtility.TryGainRecRoomThought(pawn);
-            });
             toil.WithEffect(() => book.Props.readingEffecter, () => TargetA);
             toil.defaultCompleteMode = ToilCompleteMode.Never;
             yield return toil;
@@ -84,6 +77,22 @@ namespace VanillaBooksExpanded
             {
                 initAction = delegate ()
                 {
+                    if (pawn.carryTracker.CarriedThing is Book carriedBook)
+                    {
+                        book.stopDraw = false;
+                    }
+
+                    if (book is TechBlueprint techBlueprint)
+                    {
+                        techBlueprint.UnlockResearch(pawn);
+                    }
+                    else if (book is MapItem mapItem)
+                    {
+                        mapItem.UnlockQuest(pawn);
+                    }
+
+                    JoyUtility.TryGainRecRoomThought(pawn);
+
                     Log.Message("Hauling", true);
                     Thing thing = book;
                     StoragePriority storagePriority = StoreUtility.CurrentStoragePriorityOf(thing);
@@ -103,18 +112,22 @@ namespace VanillaBooksExpanded
 
         private static Toil FindSeatsForReading(Pawn p)
         {
-            foreach (var thing in p.Map?.listerThings?.AllThings?
-                    .Where(x => x.def?.building?.isSittable ?? false)?
-                    .OrderByDescending(y => y.def.GetStatValueAbstract(StatDefOf.Comfort)).ToList())
+            try
             {
-                if (p.CanReserve(thing))
+                foreach (var thing in p.Map?.listerThings?.AllThings?
+                    .Where(x => x.def?.building?.isSittable ?? false)?
+                    .OrderByDescending(y => y.def?.GetStatValueAbstract(StatDefOf.Comfort)).ToList())
                 {
-                    p.CurJob.targetC = thing;
-                    p.Reserve(thing, p.CurJob);
-                    var toil = Toils_Goto.GotoThing(TargetIndex.C, PathEndMode.OnCell);
-                    return toil;
+                    if (p.CanReserve(thing))
+                    {
+                        p.CurJob.targetC = thing;
+                        p.Reserve(thing, p.CurJob);
+                        var toil = Toils_Goto.GotoThing(TargetIndex.C, PathEndMode.OnCell);
+                        return toil;
+                    }
                 }
             }
+            catch { };
             return new Toil();
         }
     }

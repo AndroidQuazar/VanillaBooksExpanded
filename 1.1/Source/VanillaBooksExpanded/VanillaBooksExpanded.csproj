@@ -298,6 +298,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Books\BookData.cs" />
+    <Compile Include="Books\TechBlueprint.cs" />
+    <Compile Include="Books\MapItem.cs" />
     <Compile Include="Books\Newspaper.cs" />
     <Compile Include="Books\SkillBook.cs" />
     <Compile Include="JobDriver_ReadBook.cs" />

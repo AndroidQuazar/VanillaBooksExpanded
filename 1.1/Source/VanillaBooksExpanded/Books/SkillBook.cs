@@ -12,6 +12,18 @@ namespace VanillaBooksExpanded
 {
     public class SkillBook : Book
     {
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            if (!respawningAfterLoad)
+            {
+                var comp = this.TryGetComp<CompBook>();
+                if (!comp.Active)
+                {
+                    comp.InitializeBook();
+                }
+            }
+        }
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn myPawn)
         {
             if (!ReachabilityUtility.CanReach(myPawn, this, PathEndMode.InteractionCell, Danger.Deadly, false, 0))
@@ -90,6 +102,11 @@ namespace VanillaBooksExpanded
             return SkillData.baseGainedXPper1Tick * GetLearnQuality();
         }
 
+        public override void ExposeData()
+        {
+            base.ExposeData();
+            Scribe_Values.Look<bool>(ref this.stopDraw, "stopDraw", false);
+        }
     }
 }
 

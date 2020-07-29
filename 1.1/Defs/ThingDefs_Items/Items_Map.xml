@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>VBE_Map</defName>
+    <label>map</label>
+    <description>A perishable newspaper. Reading it will provide colonists with joy.</description>
+    <graphicData>
+      <texPath>Things/Item/Map</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+	<thingClass>VanillaBooksExpanded.MapItem</thingClass>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+		<MaxHitPoints>20</MaxHitPoints>
+		<WorkToMake>3340</WorkToMake>
+		<Mass>0.1</Mass>
+		<Beauty>-1</Beauty>
+		<Flammability>1.0</Flammability>
+        <DeteriorationRate>30</DeteriorationRate>
+    </statBases>
+    <stackLimit>1</stackLimit>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<readingEffecter>VBE_ReadingMapEffecter</readingEffecter>
+		</li>
+    </comps>
+    <thingCategories>
+      <li>VBE_Books</li>
+    </thingCategories>
+    <tradeability>Buyable</tradeability>
+    <tradeTags>
+      <li>Book</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

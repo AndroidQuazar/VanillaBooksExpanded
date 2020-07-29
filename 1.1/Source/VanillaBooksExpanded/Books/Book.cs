@@ -18,14 +18,6 @@ namespace VanillaBooksExpanded
         {
             base.SpawnSetup(map, respawningAfterLoad);
             this.stopDraw = false;
-            if (!respawningAfterLoad)
-            {
-                var comp = this.TryGetComp<CompBook>();
-                if (!comp.Active)
-                {
-                    comp.InitializeBook();
-                }
-            }
         }
 
         public CompProperties_Book Props => this.TryGetComp<CompBook>()?.Props;
