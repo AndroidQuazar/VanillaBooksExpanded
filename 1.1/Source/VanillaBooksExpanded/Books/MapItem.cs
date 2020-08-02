@@ -15,6 +15,22 @@ namespace VanillaBooksExpanded
     public class MapItem : Book
     {
         public bool used = false;
+
+        public bool initialized = false;
+
+        public QuestScriptDef questToUnlock;
+
+        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        {
+            base.SpawnSetup(map, respawningAfterLoad);
+            if (!respawningAfterLoad && !this.initialized)
+            {
+                Log.Message(this + " is created", true);
+                this.initialized = true;
+                this.questToUnlock = DefDatabase<QuestScriptDef>.AllDefs.Where(q => q.IsRootAny && this.HasMapNode(q.root)).RandomElement();
+            }
+        }
+
         public bool HasMapNode(QuestNode node)
         {
             if (node is QuestNode_GenerateSite || node is QuestNode_GenerateWorldObject || node is QuestNode_GetSiteTile)
@@ -43,17 +59,6 @@ namespace VanillaBooksExpanded
             }
             return false;
         }
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
-        {
-            base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad)
-            {
-                this.used = false;
-                this.questToUnlock = DefDatabase<QuestScriptDef>.AllDefs.Where(q => q.IsRootAny && this.HasMapNode(q.root)).RandomElement();
-            }
-        }
-
-        public QuestScriptDef questToUnlock;
 
         public void UnlockQuest(Pawn pawn)
         {
@@ -115,6 +120,7 @@ namespace VanillaBooksExpanded
             base.ExposeData();
             Scribe_Values.Look<bool>(ref this.stopDraw, "stopDraw", false);
             Scribe_Values.Look<bool>(ref this.used, "used", false);
+            Scribe_Values.Look<bool>(ref this.initialized, "initialized", false);
             Scribe_Defs.Look<QuestScriptDef>(ref this.questToUnlock, "questToUnlock");
 
         }

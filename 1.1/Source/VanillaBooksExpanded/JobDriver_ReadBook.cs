@@ -37,7 +37,6 @@ namespace VanillaBooksExpanded
                     book.stopDraw = true;
                 }
                 pawn.GainComfortFromCellIfPossible();
-                JoyUtility.JoyTickCheckEnd(pawn, JoyTickFullJoyAction.EndJob);
             });
 
             toil.tickAction = () =>
@@ -57,7 +56,6 @@ namespace VanillaBooksExpanded
 
                 if (book.Props.joyAmountPerTick > 0)
                 {
-                    Log.Message(pawn + " gaining joy " + book.Props.joyAmountPerTick, true);
                     pawn.needs.joy.GainJoy(book.Props.joyAmountPerTick, VBE_DefOf.VBE_Reading);
                 }
                 curReadingTicks++;

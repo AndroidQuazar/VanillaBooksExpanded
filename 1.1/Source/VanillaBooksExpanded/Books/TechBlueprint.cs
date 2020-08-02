@@ -18,6 +18,7 @@ namespace VanillaBooksExpanded
 
         public ResearchProjectDef researchProject;
 
+        public bool initialized = false;
         public override string Label
         {
             get
@@ -28,10 +29,12 @@ namespace VanillaBooksExpanded
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad)
+            if (!respawningAfterLoad && !initialized)
             {
                 this.used = false;
                 this.researchProject = DefDatabase<ResearchProjectDef>.AllDefs.RandomElement();
+                Log.Message(this + " is created");
+                initialized = true;
             }
         }
 
@@ -89,6 +92,7 @@ namespace VanillaBooksExpanded
             base.ExposeData();
             Scribe_Values.Look<bool>(ref this.stopDraw, "stopDraw", false);
             Scribe_Values.Look<bool>(ref this.used, "used", false);
+            Scribe_Values.Look<bool>(ref this.initialized, "initialized", false);
             Scribe_Defs.Look<ResearchProjectDef>(ref this.researchProject, "researchProject");
         }
     }

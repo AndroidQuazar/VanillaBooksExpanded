@@ -12,16 +12,19 @@ namespace VanillaBooksExpanded
 {
     public class SkillBook : Book
     {
+        public bool initialized = false;
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad)
+            if (!respawningAfterLoad && !initialized)
             {
+                Log.Message(this + " is created");
                 var comp = this.TryGetComp<CompBook>();
                 if (!comp.Active)
                 {
                     comp.InitializeBook();
                 }
+                initialized = true;
             }
         }
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn myPawn)
@@ -106,6 +109,7 @@ namespace VanillaBooksExpanded
         {
             base.ExposeData();
             Scribe_Values.Look<bool>(ref this.stopDraw, "stopDraw", false);
+            Scribe_Values.Look<bool>(ref this.initialized, "initialized", false);
         }
     }
 }

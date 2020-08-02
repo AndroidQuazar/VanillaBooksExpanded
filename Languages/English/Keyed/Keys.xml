@@ -15,7 +15,7 @@
 	<VBE.CantReadBlueprintUsed>Cant read blueprint, already used</VBE.CantReadBlueprintUsed>
 
 	<VBE.ReadMap>Read map</VBE.ReadMap>
-	<VBE.CantReadMapUsed>Cant read map, already</VBE.CantReadMapUsed>
+	<VBE.CantReadMapUsed>Cant read map, already used</VBE.CantReadMapUsed>
 	<VBE.LocationsOpened>Location opened</VBE.LocationsOpened>
 	<VBE.LocationsOpenedDesc>Location opened</VBE.LocationsOpenedDesc>
 	

@@ -17,18 +17,22 @@ namespace VanillaBooksExpanded
         public int expireTime = 0;
 
         public int daysPassedRelevant = 0;
+
+        public bool initialized = false;
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad)
+            if (!respawningAfterLoad && !this.initialized)
             {
                 this.expireTime = Find.TickManager.TicksAbs + Rand.RangeInclusive(60000, 180000);
                 this.daysPassedRelevant = GenDate.DaysPassedAt(this.expireTime);
+                Log.Message(this + " is created");
                 var comp = this.TryGetComp<CompBook>();
                 if (!comp.Active)
                 {
                     comp.InitializeBook();
                 }
+                this.initialized = true;
             }
         }
         public bool IsRelevant => daysPassedRelevant >= GenDate.DaysPassed;
@@ -75,10 +79,10 @@ namespace VanillaBooksExpanded
         public override void ExposeData()
         {
             base.ExposeData();
+            Scribe_Values.Look<bool>(ref this.initialized, "initialized", false);
             Scribe_Values.Look<bool>(ref this.stopDraw, "stopDraw", false);
             Scribe_Values.Look<int>(ref this.expireTime, "expireTime", 0);
             Scribe_Values.Look<int>(ref this.daysPassedRelevant, "daysPassedRelevant", 0);
-
         }
     }
 }
