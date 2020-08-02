@@ -7,3 +7,4 @@ C:\GAMES\Rimworld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\
 C:\GAMES\Rimworld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csproj.CoreCompileInputs.cache
 C:\GAMES\Rimworld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.dll
 C:\GAMES\Rimworld\Mods\VanillaBooksExpanded\1.1\Assemblies\VanillaBooksExpanded.dll
+C:\GAMES\Rimworld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csproj.CopyComplete

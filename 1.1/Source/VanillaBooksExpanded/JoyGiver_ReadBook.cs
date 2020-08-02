@@ -29,9 +29,8 @@ namespace VanillaBooksExpanded
                 if (pawn.needs.joy.CurLevel < 0.6)
                 {
                     // newspapers
-                    var newspapers = bookCandidates.Where(b => b is Newspaper newspaper
-                    && pawn.CanReserveAndReach(newspaper, PathEndMode.Touch, Danger.Deadly)
-                    && GenDate.DaysPassedAt(newspaper.expireTime) >= GenDate.DaysPassedAt(Find.TickManager.TicksAbs));
+                    var newspapers = bookCandidates.Where(b => b is Newspaper newspaper && pawn.CanReserveAndReach(newspaper, PathEndMode.Touch, Danger.Deadly) 
+                        && newspaper.IsRelevant);
                     if (newspapers.Count() > 0)
                     {
                         var book = newspapers.RandomElement();

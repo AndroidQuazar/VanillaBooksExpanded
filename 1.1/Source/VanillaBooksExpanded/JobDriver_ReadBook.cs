@@ -10,9 +10,9 @@ namespace VanillaBooksExpanded
 {
     public class JobDriver_ReadBook : JobDriver
     {
-        private float totalReadingTicks => 1000;
-        private float curReadingTicks = 0;
+        private int curReadingTicks = 0;
         private Book book => job.GetTarget(TargetIndex.B).Thing as Book;
+        private int totalReadingTicks => book.Props.readingTicks > 0 ? book.Props.readingTicks : 1000;
 
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
@@ -72,6 +72,7 @@ namespace VanillaBooksExpanded
             };
             toil.WithEffect(() => book.Props.readingEffecter, () => TargetA);
             toil.defaultCompleteMode = ToilCompleteMode.Never;
+            ToilEffects.WithProgressBar(toil, TargetIndex.B, () => (float)this.curReadingTicks / (float)this.totalReadingTicks, false, -0.5f);
             yield return toil;
             yield return new Toil
             {

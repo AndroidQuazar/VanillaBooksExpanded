@@ -27,7 +27,7 @@
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
 			<nameMaker>ArtDescription_Newspaper</nameMaker>
 			<descriptionMaker>ArtDescription_NewspaperDesc</descriptionMaker>
-			<joyAmountPerTick>10</joyAmountPerTick>
+			<joyAmountPerTick>0.001</joyAmountPerTick>
 			<readingEffecter>VBE_ReadingNewspaperEffecter</readingEffecter>
 		</li>
     </comps>

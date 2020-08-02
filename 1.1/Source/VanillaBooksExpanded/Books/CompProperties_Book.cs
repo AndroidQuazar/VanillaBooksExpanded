@@ -15,6 +15,8 @@ namespace VanillaBooksExpanded
 
 		public float joyAmountPerTick;
 
+		public int readingTicks;
+
 		public bool mustBeFullGrave;
 
 		public bool canBeEnjoyedAsArt;

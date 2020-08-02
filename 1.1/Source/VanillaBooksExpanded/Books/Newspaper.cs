@@ -15,12 +15,15 @@ namespace VanillaBooksExpanded
     public class Newspaper : Book
     {
         public int expireTime = 0;
+
+        public int daysPassedRelevant = 0;
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
             if (!respawningAfterLoad)
             {
                 this.expireTime = Find.TickManager.TicksAbs + Rand.RangeInclusive(60000, 180000);
+                this.daysPassedRelevant = GenDate.DaysPassedAt(this.expireTime);
                 var comp = this.TryGetComp<CompBook>();
                 if (!comp.Active)
                 {
@@ -28,7 +31,7 @@ namespace VanillaBooksExpanded
                 }
             }
         }
-
+        public bool IsRelevant => daysPassedRelevant >= GenDate.DaysPassed;
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn myPawn)
         {
             if (!ReachabilityUtility.CanReach(myPawn, this, PathEndMode.InteractionCell, Danger.Deadly, false, 0))
@@ -37,7 +40,7 @@ namespace VanillaBooksExpanded
                     MenuOptionPriority.Default, null, null, 0f, null, null);
                 yield return floatMenuOption;
             }
-            else if (GenDate.DaysPassedAt(this.expireTime) >= GenDate.DaysPassedAt(Find.TickManager.TicksAbs))
+            else if (IsRelevant)
             {
                 string label = "VBE.ReadNewsPaper".Translate();
                 Action action = delegate ()
@@ -50,7 +53,7 @@ namespace VanillaBooksExpanded
                         (label, action, MenuOptionPriority.Default, null, null, 0f, null, null), myPawn,
                         this, "ReservedBy");
             }
-            else if (GenDate.DaysPassedAt(this.expireTime) < GenDate.DaysPassedAt(Find.TickManager.TicksAbs))
+            else if (!IsRelevant)
             {
                 FloatMenuOption floatMenuOption = new FloatMenuOption(Translator.Translate("VBE.CantReadNewsPaperExpired"), null,
                 MenuOptionPriority.Default, null, null, 0f, null, null);
@@ -65,10 +68,6 @@ namespace VanillaBooksExpanded
             StringBuilder stringBuilder = new StringBuilder();
             stringBuilder.Append(base.GetInspectString() + "\n");
             Vector2 vector = Find.WorldGrid.LongLatOf(this.Map.Tile);
-            Log.Message(this.expireTime + " - " + Find.TickManager.TicksAbs);
-            Log.Message(GenDate.DaysPassedAt(this.expireTime) + " expire day");
-            Log.Message(GenDate.DaysPassedAt(Find.TickManager.TicksAbs) + " today day");
-
             stringBuilder.Append("VBE.NewspaperRelevantUntil".Translate() + GenDate.DateReadoutStringAt((long)this.expireTime, vector));
             return stringBuilder.ToString().TrimEndNewlines();
         }
@@ -78,6 +77,8 @@ namespace VanillaBooksExpanded
             base.ExposeData();
             Scribe_Values.Look<bool>(ref this.stopDraw, "stopDraw", false);
             Scribe_Values.Look<int>(ref this.expireTime, "expireTime", 0);
+            Scribe_Values.Look<int>(ref this.daysPassedRelevant, "daysPassedRelevant", 0);
+
         }
     }
 }
