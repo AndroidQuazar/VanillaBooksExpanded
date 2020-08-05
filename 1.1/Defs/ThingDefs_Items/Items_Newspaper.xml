@@ -30,6 +30,7 @@
 			<readingTicks>500</readingTicks>
 			<joyAmountPerTick>0.001</joyAmountPerTick>
 			<readingEffecter>VBE_ReadingNewspaperEffecter</readingEffecter>
+			<destroyAfterReading>true</destroyAfterReading>
 		</li>
     </comps>
     <thingCategories>

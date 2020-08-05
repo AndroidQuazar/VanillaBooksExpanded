@@ -27,6 +27,8 @@
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
 			<readingEffecter>VBE_ReadingTechBlueprintEffecter</readingEffecter>
 			<readingTicks>20000</readingTicks>
+			<destroyAfterReading>true</destroyAfterReading>
+			<saveReadingProgress>true</saveReadingProgress>
 		</li>
     </comps>
     <thingCategories>

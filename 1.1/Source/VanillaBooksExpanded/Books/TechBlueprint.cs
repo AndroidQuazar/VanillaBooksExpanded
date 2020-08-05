@@ -78,7 +78,7 @@ namespace VanillaBooksExpanded
                 MenuOptionPriority.Default, null, null, 0f, null, null);
                 yield return floatMenuOption;
             }
-            else if (this.researchProject.PrerequisitesCompleted)
+            else if (!this.researchProject.PrerequisitesCompleted)
             {
                 FloatMenuOption floatMenuOption = new FloatMenuOption(Translator.Translate("VBE.CantReadBlueprintTooAdvanced"), null,
                 MenuOptionPriority.Default, null, null, 0f, null, null);

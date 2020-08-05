@@ -26,6 +26,7 @@
     <comps>
 		<li Class="VanillaBooksExpanded.CompProperties_Book">
 			<readingEffecter>VBE_ReadingMapEffecter</readingEffecter>
+			<destroyAfterReading>true</destroyAfterReading>
 		</li>
     </comps>
     <thingCategories>

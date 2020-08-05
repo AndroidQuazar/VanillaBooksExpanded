@@ -14,6 +14,7 @@ namespace VanillaBooksExpanded
     {
         public bool stopDraw = false;
 
+        public int curReadingTicks;
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
         {
             base.SpawnSetup(map, respawningAfterLoad);
@@ -41,6 +42,8 @@ namespace VanillaBooksExpanded
         {
             base.ExposeData();
             Scribe_Values.Look<bool>(ref this.stopDraw, "stopDraw", false);
+            Scribe_Values.Look<int>(ref this.curReadingTicks, "curReadingTicks", 0);
+
         }
     }
 }

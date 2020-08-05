@@ -37,6 +37,10 @@ namespace VanillaBooksExpanded
                     book.stopDraw = true;
                 }
                 pawn.GainComfortFromCellIfPossible();
+                if (book.Props.saveReadingProgress)
+                {
+                    curReadingTicks = book.curReadingTicks;
+                }
             });
 
             toil.tickAction = () =>
@@ -53,12 +57,12 @@ namespace VanillaBooksExpanded
                         actor.skills.Learn(compBook.Props.skillData.skillToTeach, learnValue);
                     }
                 }
-
                 if (book.Props.joyAmountPerTick > 0)
                 {
                     pawn.needs.joy.GainJoy(book.Props.joyAmountPerTick, VBE_DefOf.VBE_Reading);
                 }
                 curReadingTicks++;
+                book.curReadingTicks = curReadingTicks;
                 if (curReadingTicks > totalReadingTicks)
                 {
                     if (pawn.carryTracker.CarriedThing is Book carriedBook)
@@ -91,19 +95,24 @@ namespace VanillaBooksExpanded
                     }
 
                     JoyUtility.TryGainRecRoomThought(pawn);
-
-                    Log.Message("Hauling", true);
-                    Thing thing = book;
-                    StoragePriority storagePriority = StoreUtility.CurrentStoragePriorityOf(thing);
-                    IntVec3 intVec;
-                    if (StoreUtility.TryFindBestBetterStoreCellFor(thing, this.pawn, base.Map, storagePriority, this.pawn.Faction, out intVec, true))
+                    if (book.Props.destroyAfterReading)
                     {
-                        this.job.SetTarget(TargetIndex.C, intVec);
-                        this.job.SetTarget(TargetIndex.B, thing);
-                        this.job.count = thing.stackCount;
-                        return;
+                        book.Destroy(DestroyMode.Vanish);
                     }
-                    base.EndJobWith(JobCondition.Incompletable);
+                    else
+                    {
+                        Thing thing = book;
+                        StoragePriority storagePriority = StoreUtility.CurrentStoragePriorityOf(thing);
+                        IntVec3 intVec;
+                        if (StoreUtility.TryFindBestBetterStoreCellFor(thing, this.pawn, base.Map, storagePriority, this.pawn.Faction, out intVec, true))
+                        {
+                            this.job.SetTarget(TargetIndex.C, intVec);
+                            this.job.SetTarget(TargetIndex.B, thing);
+                            this.job.count = thing.stackCount;
+                            return;
+                        }
+                    }
+                    base.EndJobWith(JobCondition.Succeeded);
                 },
                 defaultCompleteMode = ToilCompleteMode.Instant
             };

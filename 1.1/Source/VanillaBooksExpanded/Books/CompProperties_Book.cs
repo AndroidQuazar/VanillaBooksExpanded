@@ -17,6 +17,10 @@ namespace VanillaBooksExpanded
 
 		public int readingTicks;
 
+		public bool destroyAfterReading;
+
+		public bool saveReadingProgress;
+
 		public bool mustBeFullGrave;
 
 		public bool canBeEnjoyedAsArt;
