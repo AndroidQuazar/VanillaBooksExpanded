@@ -7,16 +7,16 @@
 	
 	<VBE.ReadNewsPaper>Read newspaper</VBE.ReadNewsPaper>
 	<VBE.NewspaperRelevantUntil>Relevant until: </VBE.NewspaperRelevantUntil>
-	<VBE.CantReadNewsPaperExpired>Nothing useful to read, the newspaper is out of date</VBE.CantReadNewsPaperExpired>
+	<VBE.CantReadNewsPaperExpired>Can't read: This newspaper is out of date.</VBE.CantReadNewsPaperExpired>
 
 	<VBE.ReadBlueprint>Read blueprint</VBE.ReadBlueprint>
-	<VBE.CantReadBlueprintAlreadyResearched>Cant read blueprint, already researched</VBE.CantReadBlueprintAlreadyResearched>
-	<VBE.CantReadBlueprintTooAdvanced>Cant read blueprint, too advanced</VBE.CantReadBlueprintTooAdvanced>
-	<VBE.CantReadBlueprintUsed>Cant read blueprint, already used</VBE.CantReadBlueprintUsed>
+	<VBE.CantReadBlueprintAlreadyResearched>Can't read: This technology is already known.</VBE.CantReadBlueprintAlreadyResearched>
+	<VBE.CantReadBlueprintTooAdvanced>Can't read: This technology is too advanced.</VBE.CantReadBlueprintTooAdvanced>
+	<VBE.CantReadBlueprintUsed>Can't read: This blueprint is already used.</VBE.CantReadBlueprintUsed>
 
 	<VBE.ReadMap>Read map</VBE.ReadMap>
-	<VBE.CantReadMapUsed>Cant read map, already used</VBE.CantReadMapUsed>
-	<VBE.LocationsOpened>Location opened</VBE.LocationsOpened>
-	<VBE.LocationsOpenedDesc>Location opened</VBE.LocationsOpenedDesc>
+	<VBE.CantReadMapUsed>Can't read: This map is already used</VBE.CantReadMapUsed>
+	<VBE.LocationsOpened>New location found</VBE.LocationsOpened>
+	<VBE.LocationsOpenedDesc>Reading the map has unlocked a new location.</VBE.LocationsOpenedDesc>
 	
 </LanguageData>
