@@ -36,7 +36,7 @@
       <workSkill>Intellectual</workSkill>
       <unfinishedThingDef>VBE_UnfinishedBook</unfinishedThingDef>
       <effectWorking>Sculpt</effectWorking>
-      <soundWorking>Recipe_Sculpt</soundWorking>
+      <soundWorking>Recipe_Write</soundWorking>
       <recipeUsers>
         <li>VBE_WritersTable</li>
 		<li>VBE_TypewritersTable</li>

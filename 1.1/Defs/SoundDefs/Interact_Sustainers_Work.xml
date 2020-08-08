@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Defs>
+
+  <SoundDef>
+    <defName>Recipe_Write</defName>  
+    <sustain>True</sustain>  
+    <context>MapOnly</context>
+    <maxVoices>3</maxVoices>  
+    <priorityMode>PrioritizeNearest</priorityMode>  
+    <sustainStartSound>Sculpt_Start</sustainStartSound>  
+    <sustainStopSound>Sculpt_Stop</sustainStopSound>  
+    <subSounds>
+      <li>
+        <muteWhenPaused>True</muteWhenPaused>      
+        <grains>
+          <li Class="AudioGrain_Folder">
+            <clipFolderPath>Interact/Work/Write/Writing_Loop</clipFolderPath>
+          </li>
+        </grains>      
+        <volumeRange>100~100</volumeRange>      
+        <pitchRange>0.9541177~1.137647</pitchRange>      
+        <distRange>10~50</distRange>      
+        <sustainLoop>False</sustainLoop>
+      </li>
+    </subSounds>
+  </SoundDef>
+
+</Defs>

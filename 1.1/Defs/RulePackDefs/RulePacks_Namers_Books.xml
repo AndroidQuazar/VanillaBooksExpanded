@@ -33,13 +33,9 @@
   
   <RulePackDef>
     <defName>ArtDescription_NewspaperDesc</defName>
-    <include>
-      <li>VBE_BookUtility</li>
-      <li>ArtNameUtility</li>
-    </include>
     <rulePack>
       <rulesStrings>
-		<li>r_art_name->context_newspaper</li>
+		<li>r_art_name->This newspaper goes indepth about the events of the last couple of days.</li>
       </rulesStrings>
     </rulePack>
   </RulePackDef>

@@ -4,7 +4,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>VBE_Map</defName>
     <label>map</label>
-    <description>A perishable newspaper. Reading it will provide colonists with joy.</description>
+    <description>A paper map containing information about a point of interest. Studying it will unlock a location on the world map.</description>
     <graphicData>
       <texPath>Things/Item/Map</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -34,7 +34,7 @@
     </thingCategories>
     <tradeability>Buyable</tradeability>
     <tradeTags>
-      <li>Book</li>
+      <li>Book_Map</li>
     </tradeTags>
   </ThingDef>
 

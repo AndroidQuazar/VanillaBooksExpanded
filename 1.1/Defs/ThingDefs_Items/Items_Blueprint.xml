@@ -4,7 +4,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>VBE_Blueprint</defName>
     <label>blueprint</label>
-    <description>A perishable newspaper. Reading it will provide colonists with joy.</description>
+    <description>A blueprint containing technological secrets. Studying it will provide your colony with full understanding of a given research project.\n\nBlueprints containing too advanced knowledge cannot be read until more research projects are completed.</description>
     <graphicData>
       <texPath>Things/Item/TechBlueprint</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -36,7 +36,7 @@
     </thingCategories>
     <tradeability>Buyable</tradeability>
     <tradeTags>
-      <li>Book</li>
+      <li>Book_Blueprint</li>
     </tradeTags>
   </ThingDef>
 

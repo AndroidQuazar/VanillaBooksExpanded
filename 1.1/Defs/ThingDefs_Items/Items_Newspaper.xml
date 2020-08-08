@@ -4,7 +4,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>VBE_Newspaper</defName>
     <label>newspaper</label>
-    <description>A perishable newspaper. Reading it will provide colonists with joy.</description>
+    <description>A perishable newspaper. Reading it will provide colonists with joy.\n\nOut of date newspaper cannot be read and needs to be cleaned up.</description>
     <graphicData>
       <texPath>Things/Item/Newspaper</texPath>
       <graphicClass>Graphic_Single</graphicClass>
@@ -36,9 +36,6 @@
     <thingCategories>
       <li>VBE_Books</li>
     </thingCategories>
-    <inspectorTabs>
-      <li>VanillaBooksExpanded.ITab_Book</li>
-    </inspectorTabs>
     <tradeability>Buyable</tradeability>
     <tradeTags>
       <li>Book</li>
@@ -51,7 +48,7 @@
       <workSkill>Intellectual</workSkill>
       <unfinishedThingDef>VBE_UnfinishedNewspaper</unfinishedThingDef>
       <effectWorking>Sculpt</effectWorking>
-      <soundWorking>Recipe_Sculpt</soundWorking>
+      <soundWorking>Recipe_Write</soundWorking>
       <recipeUsers>
 		<li>VBE_TypewritersTable</li>
       </recipeUsers>
