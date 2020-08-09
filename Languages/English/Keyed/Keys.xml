@@ -5,6 +5,8 @@
 	<VBE.Book>Book</VBE.Book>
 	<VBE.ReadBook>Read book</VBE.ReadBook>
 	
+	<VBE.CantReadSkillBookTooSimple>Can't read: This skillbook is too simple</VBE.CantReadSkillBookTooSimple>
+
 	<VBE.ReadNewsPaper>Read newspaper</VBE.ReadNewsPaper>
 	<VBE.NewspaperRelevantUntil>Relevant until: </VBE.NewspaperRelevantUntil>
 	<VBE.CantReadNewsPaperExpired>Can't read: This newspaper is out of date.</VBE.CantReadNewsPaperExpired>

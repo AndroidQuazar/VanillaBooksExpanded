@@ -35,7 +35,7 @@ namespace VanillaBooksExpanded
                     MenuOptionPriority.Default, null, null, 0f, null, null);
                 yield return floatMenuOption;
             }
-            else
+            else if (this.CanLearnFromBook(myPawn))
             {
                 string label = "VBE.ReadBook".Translate();
                 Action action = delegate ()
@@ -47,6 +47,12 @@ namespace VanillaBooksExpanded
                 yield return FloatMenuUtility.DecoratePrioritizedTask(new FloatMenuOption
                         (label, action, MenuOptionPriority.Default, null, null, 0f, null, null), myPawn,
                         this, "ReservedBy");
+            }
+            else if (!this.CanLearnFromBook(myPawn))
+            {
+                FloatMenuOption floatMenuOption = new FloatMenuOption(Translator.Translate("VBE.CantReadSkillBookTooSimple"), null,
+                    MenuOptionPriority.Default, null, null, 0f, null, null);
+                yield return floatMenuOption;
             }
             yield break;
         }

@@ -48,13 +48,24 @@ namespace VanillaBooksExpanded
                 Pawn actor = pawn;
                 if (book is SkillBook skillBook)
                 {
-                    var compBook = skillBook.TryGetComp<CompBook>();
-                    if (compBook != null && compBook.Props.skillData.skillToTeach != null)
+                    if (skillBook.CanLearnFromBook(pawn))
                     {
-                        var learnValue = skillBook.GetLearnAmount();
-                        //Log.Message(pawn + " learn " + compBook.Props.skillData.skillToTeach + " ("
-                        //    + learnValue + ") from " + book + " - " + book.TryGetComp<CompQuality>().Quality, true);
-                        actor.skills.Learn(compBook.Props.skillData.skillToTeach, learnValue);
+                        var compBook = skillBook.TryGetComp<CompBook>();
+                        if (compBook != null && compBook.Props.skillData.skillToTeach != null)
+                        {
+                            var learnValue = skillBook.GetLearnAmount();
+                            //Log.Message(pawn + " learn " + compBook.Props.skillData.skillToTeach + " ("
+                            //    + learnValue + ") from " + book + " - " + book.TryGetComp<CompQuality>().Quality, true);
+                            actor.skills.Learn(compBook.Props.skillData.skillToTeach, learnValue);
+                        }
+                    }
+                    else
+                    {
+                        if (pawn.carryTracker.CarriedThing is Book carriedBook)
+                        {
+                            book.stopDraw = false;
+                        }
+                        ReadyForNextToil();
                     }
                 }
                 if (book.Props.joyAmountPerTick > 0)
