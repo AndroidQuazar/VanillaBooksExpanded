@@ -17,6 +17,7 @@
     <statBases>
 		<MaxHitPoints>20</MaxHitPoints>
 		<WorkToMake>3340</WorkToMake>
+		<MarketValue>800</MarketValue>
 		<Mass>0.1</Mass>
 		<Beauty>-1</Beauty>
 		<Flammability>1.0</Flammability>

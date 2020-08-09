@@ -17,7 +17,7 @@
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
 		<MaxHitPoints>20</MaxHitPoints>
-		<WorkToMake>3340</WorkToMake>
+		<WorkToMake>2100</WorkToMake>
 		<Mass>0.1</Mass>
 		<Beauty>-1</Beauty>
 		<Flammability>1.0</Flammability>
@@ -29,7 +29,7 @@
 			<nameMaker>ArtDescription_Newspaper</nameMaker>
 			<descriptionMaker>ArtDescription_NewspaperDesc</descriptionMaker>
 			<readingTicks>500</readingTicks>
-			<joyAmountPerTick>0.001</joyAmountPerTick>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
 			<readingEffecter>VBE_ReadingNewspaperEffecter</readingEffecter>
 		</li>
     </comps>

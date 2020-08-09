@@ -5,7 +5,7 @@
     <defName>VBE_Filth_Newspaper</defName>
     <label>old newspaper</label>
     <graphicData>
-		<texPath>Things/Filth/TrashNewspaper</texPath>
+		<texPath>Things/Filth/OldNewspaper</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>
