@@ -33,7 +33,7 @@ namespace VanillaBooksExpanded
             {
                 this.used = false;
                 this.researchProject = DefDatabase<ResearchProjectDef>.AllDefs.RandomElement();
-                Log.Message(this + " is created");
+                //Log.Message(this + " is created");
                 initialized = true;
             }
         }

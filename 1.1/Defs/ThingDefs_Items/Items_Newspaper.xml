@@ -11,6 +11,7 @@
       <drawSize>1</drawSize>
     </graphicData>
 	<thingClass>VanillaBooksExpanded.Newspaper</thingClass>
+	<tickerType>Normal</tickerType>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <socialPropernessMatters>true</socialPropernessMatters>
@@ -30,7 +31,6 @@
 			<readingTicks>500</readingTicks>
 			<joyAmountPerTick>0.001</joyAmountPerTick>
 			<readingEffecter>VBE_ReadingNewspaperEffecter</readingEffecter>
-			<destroyAfterReading>true</destroyAfterReading>
 		</li>
     </comps>
     <thingCategories>

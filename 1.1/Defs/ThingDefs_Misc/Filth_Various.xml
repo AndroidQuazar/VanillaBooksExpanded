@@ -10,10 +10,12 @@
 		<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
     </graphicData>
     <filth>
+		<!--
       <placementMask>
         <li>Terrain</li>
         <li>Unnatural</li>
       </placementMask>
+	  -->
       <disappearsInDays>45~50</disappearsInDays>
       <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
       <canFilthAttach>true</canFilthAttach>

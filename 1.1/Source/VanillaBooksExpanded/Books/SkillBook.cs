@@ -18,7 +18,7 @@ namespace VanillaBooksExpanded
             base.SpawnSetup(map, respawningAfterLoad);
             if (!respawningAfterLoad && !initialized)
             {
-                Log.Message(this + " is created");
+                //Log.Message(this + " is created");
                 var comp = this.TryGetComp<CompBook>();
                 if (!comp.Active)
                 {

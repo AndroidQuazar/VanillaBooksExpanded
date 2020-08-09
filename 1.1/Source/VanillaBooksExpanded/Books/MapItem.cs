@@ -25,7 +25,7 @@ namespace VanillaBooksExpanded
             base.SpawnSetup(map, respawningAfterLoad);
             if (!respawningAfterLoad && !this.initialized)
             {
-                Log.Message(this + " is created", true);
+                //Log.Message(this + " is created", true);
                 this.initialized = true;
                 this.questToUnlock = DefDatabase<QuestScriptDef>.AllDefs.Where(q => q.IsRootAny && this.HasMapNode(q.root)).RandomElement();
             }

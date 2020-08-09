@@ -9,7 +9,7 @@ namespace VanillaBooksExpanded
     {
         public override Job TryGiveJob(Pawn pawn)
         {
-            Log.Message("JoyGiver_ReadBook TryGiveJob");
+            //Log.Message("JoyGiver_ReadBook TryGiveJob");
             var bookCandidates = pawn.Map.listerThings.AllThings.Where(x => x is Book);
             if (bookCandidates != null && bookCandidates.Count() > 0)
             {
@@ -21,7 +21,7 @@ namespace VanillaBooksExpanded
                 if (skillBooks.Count() > 0)
                 {
                     var book = skillBooks.MaxBy(x => x.TryGetComp<CompQuality>().Quality);
-                    Log.Message(pawn + " got " + book + " with quality " + book?.TryGetComp<CompQuality>().Quality);
+                    //Log.Message(pawn + " got " + book + " with quality " + book?.TryGetComp<CompQuality>().Quality);
                     Job job = JobMaker.MakeJob(def.jobDef, null, book);
                     job.count = 1;
                     return job;
@@ -34,7 +34,7 @@ namespace VanillaBooksExpanded
                     if (newspapers.Count() > 0)
                     {
                         var book = newspapers.RandomElement();
-                        Log.Message(pawn + " got " + book);
+                        //Log.Message(pawn + " got " + book);
                         Job job = JobMaker.MakeJob(def.jobDef, null, book);
                         job.count = 1;
                         return job;
