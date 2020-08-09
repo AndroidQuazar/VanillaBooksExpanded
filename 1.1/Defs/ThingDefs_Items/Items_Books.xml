@@ -2,20 +2,25 @@
 <Defs>
 
   <ThingDef ParentName="ResourceBase" Name="VBE_SkillBookBase" Abstract="True">
-    <description>A book with a hard cover.</description>
+    <description>A book with a hard cover. It serves as a joy source and can be read to teach valuable skills.</description>
     <graphicData>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>1</drawSize>
+	  <shaderType>CutoutComplex</shaderType>
     </graphicData>
+	<costStuffCount>20</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
 	<thingClass>VanillaBooksExpanded.SkillBook</thingClass>
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <socialPropernessMatters>true</socialPropernessMatters>
     <statBases>
-		<MaxHitPoints>100</MaxHitPoints>
-		<WorkToMake>3340</WorkToMake>
+		<MaxHitPoints>30</MaxHitPoints>
+		<WorkToMake>334000</WorkToMake>
 		<Mass>0.5</Mass>
-		<Beauty>5</Beauty>
+		<Beauty>3</Beauty>
 		<Flammability>1.0</Flammability>
     </statBases>
     <stackLimit>1</stackLimit>
@@ -46,7 +51,7 @@
   
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookShooting</defName>
-    <label>book shooting</label>
+    <label>shooting book</label>
     <graphicData>
       <texPath>Things/Item/BookShooting</texPath>
     </graphicData>
@@ -78,7 +83,7 @@
   
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookAnimals</defName>
-    <label>book animals</label>
+    <label>animals book</label>
     <graphicData>
       <texPath>Things/Item/BookAnimals</texPath>
     </graphicData>
@@ -110,7 +115,7 @@
   
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookArt</defName>
-    <label>book art</label>
+    <label>art book</label>
     <graphicData>
       <texPath>Things/Item/BookArt</texPath>
     </graphicData>
@@ -142,7 +147,7 @@
   
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookConstruction</defName>
-    <label>book construction</label>
+    <label>construction book</label>
     <graphicData>
       <texPath>Things/Item/BookConstruction</texPath>
     </graphicData>
@@ -174,7 +179,7 @@
 
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookCooking</defName>
-    <label>book cooking</label>
+    <label>cooking book</label>
     <graphicData>
       <texPath>Things/Item/BookCooking</texPath>
     </graphicData>
@@ -206,7 +211,7 @@
   
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookCrafting</defName>
-    <label>book crafting</label>
+    <label>crafting book</label>
     <graphicData>
       <texPath>Things/Item/BookCrafting</texPath>
     </graphicData>
@@ -238,7 +243,7 @@
   
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookIntellectual</defName>
-    <label>book intellectual</label>
+    <label>intellectual book</label>
     <graphicData>
       <texPath>Things/Item/BookIntellectual</texPath>
     </graphicData>
@@ -270,7 +275,7 @@
   
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookMedical</defName>
-    <label>book medical</label>
+    <label>medical book</label>
     <graphicData>
       <texPath>Things/Item/BookMedical</texPath>
     </graphicData>
@@ -302,7 +307,7 @@
   
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookMelee</defName>
-    <label>book melee</label>
+    <label>melee book</label>
     <graphicData>
       <texPath>Things/Item/BookMelee</texPath>
     </graphicData>
@@ -334,7 +339,7 @@
   
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookMining</defName>
-    <label>book mining</label>
+    <label>mining book</label>
     <graphicData>
       <texPath>Things/Item/BookMining</texPath>
     </graphicData>
@@ -366,7 +371,7 @@
   
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookGrowing</defName>
-    <label>book growing</label>
+    <label>growing book</label>
     <graphicData>
       <texPath>Things/Item/BookPlants</texPath>
     </graphicData>
@@ -398,7 +403,7 @@
   
   <ThingDef ParentName="VBE_SkillBookBase">
     <defName>VBE_BookSocial</defName>
-    <label>book social</label>
+    <label>social book</label>
     <graphicData>
       <texPath>Things/Item/BookSocial</texPath>
     </graphicData>
