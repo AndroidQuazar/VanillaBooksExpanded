@@ -3,15 +3,16 @@
     <name>Vanilla Books Expanded</name>
     <author>Oskar Potocki, Taranchuk</author>
     <url></url>
-    <description>Vanilla Books Expanded is a mod allowing your colonists to pass their knowledge and skill to others. By writing a book about a particular field of science or skill, pawns will transfer their insights and knowledge, and when read, such book will train others in the same skill. Book reading is a new type of joy, with pawns picking up the books best suited for them based on their passions and skillsets, expanding on them whilst getting joy buffs.
+    <description>Vanilla Books Expanded is a mod allowing your colonists to pass their knowledge and skill to others. By writing a book about a particular field of science or skill, pawns will transfer their insights and knowledge, and when read, such books will train others in the same skill. Book reading is a new type of joy, with pawns picking up the books best suited for them based on their passions and skill sets, expanding on them whilst getting joy buffs.
 	
-	Books feature complex descriptions, letting you, the player, know what the book is about in a funny, quirky RimWorld style. Later technologies also allow you to write fiction books and newspapers, providing joy but spoiling at a rapid rate. In addition to that, maps and blueprints can be found with traders - former unlocking quests, and latter unlocking technologies.
-	
-	This version is a beta version dated 14/07/2020. Property of Oskar Potocki. Redistributing it, sharing it, modifying it and publishing it is a direct violation of intellectual property law.</description>
+Books feature complex descriptions, letting you, the player, know what the book is about in a funny, quirky RimWorld style. Later technologies also allow you to write newspapers, providing joy but spoiling at a rapid rate. In addition to that, maps and blueprints can be found with traders - former unlocking quests, and latter unlocking technologies!
+
+Books take a long time to write - no one writes a book overnight, but they increase in quality and value the more skilled your colonist is in that particular field of study. With this mod you can build massive libraries and have pawns enjoy the books in their schedule. Take a minute to read the book descriptions as we have spent dozens of hours writing up different combinations of words to make the funniest descriptions possible!
+</description>
     <supportedVersions>
 		<li>1.2</li>
         <li>1.1</li>
 		<li>1.0</li>
     </supportedVersions>
-	<packageId>VanillaExpanded.VBE</packageId>
+	<packageId>VanillaExpanded.VBooksE</packageId>
 </ModMetaData>
