@@ -46,6 +46,7 @@ namespace VanillaBooksExpanded
             toil.tickAction = () =>
             {
                 Pawn actor = pawn;
+                actor.Rotation = TargetC.Thing.Rotation;
                 if (book is SkillBook skillBook)
                 {
                     if (skillBook.CanLearnFromBook(pawn))
@@ -83,6 +84,7 @@ namespace VanillaBooksExpanded
                     ReadyForNextToil();
                 }
             };
+            toil.handlingFacing = true;
             toil.WithEffect(() => book.Props.readingEffecter, () => TargetA);
             toil.defaultCompleteMode = ToilCompleteMode.Never;
             ToilEffects.WithProgressBar(toil, TargetIndex.B, () => (float)this.curReadingTicks / (float)this.totalReadingTicks, false, -0.5f);
