@@ -46,7 +46,10 @@ namespace VanillaBooksExpanded
             toil.tickAction = () =>
             {
                 Pawn actor = pawn;
-                actor.Rotation = TargetC.Thing.Rotation;
+                if (TargetC.HasThing)
+                {
+                    actor.Rotation = TargetC.Thing.Rotation;
+                }
                 if (book is SkillBook skillBook)
                 {
                     if (skillBook.CanLearnFromBook(pawn))
