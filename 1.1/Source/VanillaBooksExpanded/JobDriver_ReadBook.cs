@@ -139,8 +139,7 @@ namespace VanillaBooksExpanded
         {
             try
             {
-                var chairCandidates = p.Map?.listerThings?.AllThings?
-                    .Where(x => x.def?.building?.isSittable ?? false);
+                var chairCandidates = p.Map?.listerThings?.AllThings?.Where(x => x.def?.building?.isSittable ?? false);
                 var bestChairs = new Dictionary<float, List<Thing>>();
                 foreach (var chair in chairCandidates)
                 {
@@ -172,6 +171,17 @@ namespace VanillaBooksExpanded
                         }
                     }
                     bestChairs.Remove(key);
+                }
+
+                foreach (var thing in chairCandidates.OrderByDescending(y => y.def?.GetStatValueAbstract(StatDefOf.Comfort)))
+                {
+                    if (p.CanReserve(thing))
+                    {
+                        p.CurJob.targetC = thing;
+                        p.Reserve(thing, p.CurJob);
+                        var toil = Toils_Goto.GotoThing(TargetIndex.C, PathEndMode.OnCell);
+                        return toil;
+                    }
                 }
             }
             catch { };
