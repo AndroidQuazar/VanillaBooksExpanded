@@ -162,7 +162,7 @@ namespace VanillaBooksExpanded
                     var key = bestChairs.MaxBy(x => x.Key).Key;
                     foreach (var thing in bestChairs[key].OrderBy(y => IntVec3Utility.DistanceTo(p.Position, y.Position)))
                     {
-                        if (p.CanReserve(thing))
+                        if (p.CanReserveAndReach(thing, PathEndMode.OnCell, Danger.Deadly))
                         {
                             p.CurJob.targetC = thing;
                             p.Reserve(thing, p.CurJob);
@@ -175,7 +175,7 @@ namespace VanillaBooksExpanded
 
                 foreach (var thing in chairCandidates.OrderByDescending(y => y.def?.GetStatValueAbstract(StatDefOf.Comfort)))
                 {
-                    if (p.CanReserve(thing))
+                    if (p.CanReserveAndReach(thing, PathEndMode.OnCell, Danger.Deadly))
                     {
                         p.CurJob.targetC = thing;
                         p.Reserve(thing, p.CurJob);
