@@ -134,13 +134,30 @@ namespace VanillaBooksExpanded
             };
         }
 
+
         private static Toil FindSeatsForReading(Pawn p)
         {
             try
             {
-                foreach (var thing in p.Map?.listerThings?.AllThings?
-                    .Where(x => x.def?.building?.isSittable ?? false)?
-                    .OrderByDescending(y => y.def?.GetStatValueAbstract(StatDefOf.Comfort)).ToList())
+                var chairCandidates = p.Map?.listerThings?.AllThings?
+                    .Where(x => x.def?.building?.isSittable ?? false);
+                var bestChairs = new Dictionary<float, List<Thing>>();
+                foreach (var chair in chairCandidates)
+                {
+                    var score = chair.def?.GetStatValueAbstract(StatDefOf.Comfort);
+                    if (score.HasValue && IntVec3Utility.DistanceTo(p.Position, chair.Position) < 60)
+                    {
+                        if (bestChairs.ContainsKey(score.Value))
+                        {
+                            bestChairs[score.Value].Add(chair);
+                        }
+                        else
+                        {
+                            bestChairs[score.Value] = new List<Thing> { chair };
+                        }
+                    }
+                }
+                foreach (var thing in bestChairs.MaxBy(x => x.Key).Value.OrderBy(y => IntVec3Utility.DistanceTo(p.Position, y.Position)))
                 {
                     if (p.CanReserve(thing))
                     {
