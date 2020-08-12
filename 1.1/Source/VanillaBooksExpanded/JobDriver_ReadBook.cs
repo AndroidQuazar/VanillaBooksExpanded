@@ -157,15 +157,21 @@ namespace VanillaBooksExpanded
                         }
                     }
                 }
-                foreach (var thing in bestChairs.MaxBy(x => x.Key).Value.OrderBy(y => IntVec3Utility.DistanceTo(p.Position, y.Position)))
+
+                while (bestChairs.Count > 0)
                 {
-                    if (p.CanReserve(thing))
+                    var key = bestChairs.MaxBy(x => x.Key).Key;
+                    foreach (var thing in bestChairs[key].OrderBy(y => IntVec3Utility.DistanceTo(p.Position, y.Position)))
                     {
-                        p.CurJob.targetC = thing;
-                        p.Reserve(thing, p.CurJob);
-                        var toil = Toils_Goto.GotoThing(TargetIndex.C, PathEndMode.OnCell);
-                        return toil;
+                        if (p.CanReserve(thing))
+                        {
+                            p.CurJob.targetC = thing;
+                            p.Reserve(thing, p.CurJob);
+                            var toil = Toils_Goto.GotoThing(TargetIndex.C, PathEndMode.OnCell);
+                            return toil;
+                        }
                     }
+                    bestChairs.Remove(key);
                 }
             }
             catch { };
