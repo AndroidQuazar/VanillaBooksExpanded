@@ -144,7 +144,8 @@ namespace VanillaBooksExpanded
                 foreach (var chair in chairCandidates)
                 {
                     var score = chair.def?.GetStatValueAbstract(StatDefOf.Comfort);
-                    if (score.HasValue && IntVec3Utility.DistanceTo(p.Position, chair.Position) < 60)
+                    if (score.HasValue && IntVec3Utility.DistanceTo(p.Position, chair.Position) < 60 
+                        && chair?.GetRoom()?.Role != DefDatabase<RoomRoleDef>.GetNamed("Workshop"))
                     {
                         if (bestChairs.ContainsKey(score.Value))
                         {
