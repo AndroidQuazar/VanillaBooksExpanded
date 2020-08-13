@@ -74,7 +74,7 @@ namespace VanillaBooksExpanded
             base.Tick();
             if (Find.TickManager.TicksGame % 60 == 0)
             {
-                if (!IsRelevant)
+                if (!IsRelevant && this.Map != null)
                 {
                     FilthMaker.TryMakeFilth(this.Position, this.Map, VBE_DefOf.VBE_Filth_Newspaper);
                     this.Destroy(DestroyMode.Vanish);
