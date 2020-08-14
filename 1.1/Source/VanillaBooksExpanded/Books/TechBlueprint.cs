@@ -23,7 +23,11 @@ namespace VanillaBooksExpanded
         {
             get
             {
-                return base.Label + " (" + this.researchProject.LabelCap + ")";
+                if (this.researchProject != null)
+                {
+                    return base.Label + " (" + this.researchProject.LabelCap + ")";
+                }
+                return base.Label;
             }
         }
         public override void SpawnSetup(Map map, bool respawningAfterLoad)
