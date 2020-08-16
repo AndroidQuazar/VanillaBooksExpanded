@@ -8,7 +8,7 @@
 		<description>Construct a writing desk and have your colonists write books that pass their knowledge to other members of their society.</description>
 		<baseCost>400</baseCost>
 		<techLevel>Medieval</techLevel>
-		<researchViewY>8</researchViewY>
+		<researchViewY>7</researchViewY>
 		<researchViewX>3</researchViewX>
 	</ResearchProjectDef>
 	
@@ -19,7 +19,10 @@
 		<description>Build a typwriter, which allows your colonists to write books significantly faster, as well as create newspapers for temporary joy boost.</description>
 		<baseCost>800</baseCost>
 		<techLevel>Industrial</techLevel>
-		<researchViewY>8</researchViewY>
+    <prerequisites>
+      <li>VBE_Writing</li>
+    </prerequisites>
+		<researchViewY>7</researchViewY>
 		<researchViewX>4</researchViewX>
 	</ResearchProjectDef>
 	
