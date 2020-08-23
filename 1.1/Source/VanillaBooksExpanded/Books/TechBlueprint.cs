@@ -19,6 +19,7 @@ namespace VanillaBooksExpanded
         public ResearchProjectDef researchProject;
 
         public bool initialized = false;
+
         public override string Label
         {
             get

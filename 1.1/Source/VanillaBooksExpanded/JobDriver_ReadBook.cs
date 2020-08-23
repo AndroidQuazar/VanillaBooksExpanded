@@ -135,7 +135,7 @@ namespace VanillaBooksExpanded
         }
 
 
-        private static Toil FindSeatsForReading(Pawn p)
+        private Toil FindSeatsForReading(Pawn p)
         {
             try
             {
@@ -144,7 +144,7 @@ namespace VanillaBooksExpanded
                 foreach (var chair in chairCandidates)
                 {
                     var score = chair.def?.GetStatValueAbstract(StatDefOf.Comfort);
-                    if (score.HasValue && IntVec3Utility.DistanceTo(p.Position, chair.Position) < 60 
+                    if (score.HasValue && IntVec3Utility.DistanceTo(book.Position, chair.Position) < 60 
                         && chair?.GetRoom()?.Role != DefDatabase<RoomRoleDef>.GetNamed("Workshop"))
                     {
                         if (bestChairs.ContainsKey(score.Value))
@@ -161,7 +161,7 @@ namespace VanillaBooksExpanded
                 while (bestChairs.Count > 0)
                 {
                     var key = bestChairs.MaxBy(x => x.Key).Key;
-                    foreach (var thing in bestChairs[key].OrderBy(y => IntVec3Utility.DistanceTo(p.Position, y.Position)))
+                    foreach (var thing in bestChairs[key].OrderBy(y => IntVec3Utility.DistanceTo(book.Position, y.Position)))
                     {
                         if (p.CanReserveAndReach(thing, PathEndMode.OnCell, Danger.Deadly))
                         {
