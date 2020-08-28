@@ -144,8 +144,9 @@ namespace VanillaBooksExpanded
                 foreach (var chair in chairCandidates)
                 {
                     var score = chair.def?.GetStatValueAbstract(StatDefOf.Comfort);
-                    if (score.HasValue && IntVec3Utility.DistanceTo(book.Position, chair.Position) < 60 
-                        && chair?.GetRoom()?.Role != DefDatabase<RoomRoleDef>.GetNamed("Workshop"))
+                    if (score.HasValue && IntVec3Utility.DistanceTo(book.Position, chair.Position) < 60 && !chair.IsForbidden(p)
+                        && chair?.GetRoom()?.Role != DefDatabase<RoomRoleDef>.GetNamed("Workshop")
+                        && chair?.GetRoom()?.Role != DefDatabase<RoomRoleDef>.GetNamed("ThroneRoom"))
                     {
                         if (bestChairs.ContainsKey(score.Value))
                         {
@@ -163,7 +164,7 @@ namespace VanillaBooksExpanded
                     var key = bestChairs.MaxBy(x => x.Key).Key;
                     foreach (var thing in bestChairs[key].OrderBy(y => IntVec3Utility.DistanceTo(book.Position, y.Position)))
                     {
-                        if (p.CanReserveAndReach(thing, PathEndMode.OnCell, Danger.Deadly))
+                        if (p.CanReserveAndReach(thing, PathEndMode.OnCell, Danger.Deadly) && !thing.IsForbidden(p))
                         {
                             p.CurJob.targetC = thing;
                             p.Reserve(thing, p.CurJob);
@@ -176,7 +177,7 @@ namespace VanillaBooksExpanded
 
                 foreach (var thing in chairCandidates.OrderByDescending(y => y.def?.GetStatValueAbstract(StatDefOf.Comfort)))
                 {
-                    if (p.CanReserveAndReach(thing, PathEndMode.OnCell, Danger.Deadly))
+                    if (p.CanReserveAndReach(thing, PathEndMode.OnCell, Danger.Deadly) && !thing.IsForbidden(p))
                     {
                         p.CurJob.targetC = thing;
                         p.Reserve(thing, p.CurJob);
