@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RoomRoleDef>
+    <defName>VBE_Library</defName>
+    <label>library room</label>
+    <workerClass>VanillaBooksExpanded.RoomRoleWorker_Library</workerClass>
+    <relatedStats>
+      <li>Beauty</li>
+      <li>Cleanliness</li>
+      <li>Wealth</li>
+      <li>Space</li>
+      <li>Impressiveness</li>
+    </relatedStats>
+  </RoomRoleDef>
+
+</Defs>

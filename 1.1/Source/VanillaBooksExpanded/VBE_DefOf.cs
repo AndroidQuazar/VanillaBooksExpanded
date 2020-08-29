@@ -16,6 +16,10 @@ namespace VanillaBooksExpanded
 		public static JoyKindDef VBE_Reading;
 
 		public static ThingDef VBE_Filth_Newspaper;
+
+		public static RoomRoleDef VBE_Library;
+
+		public static ThoughtDef VBE_JoyActivityInImpressiveLibraryRoom;
 	}
 }
 

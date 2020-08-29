@@ -302,6 +302,7 @@
     <Compile Include="Books\MapItem.cs" />
     <Compile Include="Books\Newspaper.cs" />
     <Compile Include="Books\SkillBook.cs" />
+    <Compile Include="RoomRoleWorker_Library.cs" />
     <Compile Include="JobDriver_ReadBook.cs" />
     <Compile Include="JoyGiver_ReadBook.cs" />
     <Compile Include="SubEffecter_ReadingBookSymbol.cs" />

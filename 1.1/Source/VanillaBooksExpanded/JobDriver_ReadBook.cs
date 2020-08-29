@@ -19,6 +19,18 @@ namespace VanillaBooksExpanded
             return pawn.Reserve(book, job, errorOnFailed: errorOnFailed);
         }
 
+        public static void TryGainLibraryRoomThought(Pawn pawn)
+        {
+            Room room = pawn.GetRoom();
+            if (room != null && room.Role == VBE_DefOf.VBE_Library)
+            {
+                int scoreStageIndex = RoomStatDefOf.Impressiveness.GetScoreStageIndex(room.GetStat(RoomStatDefOf.Impressiveness));
+                if (pawn.needs.mood != null && VBE_DefOf.VBE_JoyActivityInImpressiveLibraryRoom.stages[scoreStageIndex] != null)
+                {
+                    pawn.needs.mood.thoughts.memories.TryGainMemory(ThoughtMaker.MakeThought(VBE_DefOf.VBE_JoyActivityInImpressiveLibraryRoom, scoreStageIndex));
+                }
+            }
+        }
         protected override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnDestroyedOrNull(TargetIndex.B);
@@ -109,8 +121,15 @@ namespace VanillaBooksExpanded
                     {
                         mapItem.UnlockQuest(pawn);
                     }
+                    if (pawn.GetRoom()?.Role == VBE_DefOf.VBE_Library)
+                    {
+                        TryGainLibraryRoomThought(pawn);
+                    }
+                    else
+                    {
+                        JoyUtility.TryGainRecRoomThought(pawn);
+                    }
 
-                    JoyUtility.TryGainRecRoomThought(pawn);
                     if (book.Props.destroyAfterReading)
                     {
                         book.Destroy(DestroyMode.Vanish);
@@ -134,7 +153,13 @@ namespace VanillaBooksExpanded
             };
         }
 
-
+        public List<RoomRoleDef> allowedRooms = new List<RoomRoleDef>
+        {
+            RoomRoleDefOf.Bedroom,
+            RoomRoleDefOf.RecRoom,
+            RoomRoleDefOf.DiningRoom,
+            VBE_DefOf.VBE_Library
+        };
         private Toil FindSeatsForReading(Pawn p)
         {
             try
@@ -144,16 +169,21 @@ namespace VanillaBooksExpanded
                 foreach (var chair in chairCandidates)
                 {
                     var score = chair.def?.GetStatValueAbstract(StatDefOf.Comfort);
-                    if (score.HasValue && IntVec3Utility.DistanceTo(book.Position, chair.Position) < 60 && !chair.IsForbidden(p)
-                        && chair?.GetRoom()?.Role?.defName != "Workshop" && chair?.GetRoom()?.Role?.defName != "ThroneRoom")
+                    if (score.HasValue && IntVec3Utility.DistanceTo(book.Position, chair.Position) < 60 && !chair.IsForbidden(p))
                     {
-                        if (bestChairs.ContainsKey(score.Value))
+                        var role = chair?.GetRoom()?.Role;
+                        if (role != null && allowedRooms.Contains(role)
+                        && ((chair.Position + chair.Rotation.FacingCell).GetFirstBuilding(p.Map)?.def.IsWorkTable ?? false)
+                        && !(chair is Building_Throne))
                         {
-                            bestChairs[score.Value].Add(chair);
-                        }
-                        else
-                        {
-                            bestChairs[score.Value] = new List<Thing> { chair };
+                            if (bestChairs.ContainsKey(score.Value))
+                            {
+                                bestChairs[score.Value].Add(chair);
+                            }
+                            else
+                            {
+                                bestChairs[score.Value] = new List<Thing> { chair };
+                            }
                         }
                     }
                 }
