@@ -172,10 +172,11 @@ namespace VanillaBooksExpanded
                     if (score.HasValue && IntVec3Utility.DistanceTo(book.Position, chair.Position) < 60 && !chair.IsForbidden(p))
                     {
                         var role = chair?.GetRoom()?.Role;
-                        if (role != null && allowedRooms.Contains(role)
-                        && ((chair.Position + chair.Rotation.FacingCell).GetFirstBuilding(p.Map)?.def.IsWorkTable ?? false)
-                        && !(chair is Building_Throne))
+                        if (role != null && allowedRooms.Contains(role) && !(chair is Building_Throne))
                         {
+                            var building = (chair.Position + chair.Rotation.FacingCell).GetFirstBuilding(p.Map);
+                            if (building != null && building.def.IsWorkTable) continue;
+
                             if (bestChairs.ContainsKey(score.Value))
                             {
                                 bestChairs[score.Value].Add(chair);
