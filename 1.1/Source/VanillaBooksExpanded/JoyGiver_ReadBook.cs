@@ -10,7 +10,7 @@ namespace VanillaBooksExpanded
         public override Job TryGiveJob(Pawn pawn)
         {
             //Log.Message("JoyGiver_ReadBook TryGiveJob");
-            var bookCandidates = pawn.Map.listerThings.AllThings.Where(x => x is Book);
+            var bookCandidates = pawn.Map.listerThings.AllThings.Where(x => x is Book && !x.IsForbidden(pawn));
             if (bookCandidates != null && bookCandidates.Count() > 0)
             {
                 // skillBooks
