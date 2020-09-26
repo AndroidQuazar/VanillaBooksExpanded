@@ -16,7 +16,7 @@
 		<defName>VBE_Printing</defName>
 		<label>printing</label>
 		<tab>VanillaExpanded</tab>
-		<description>Build a typwriter, which allows your colonists to write books significantly faster, as well as create newspapers for temporary joy boost.</description>
+		<description>Build a typewriter, which allows your colonists to write books significantly faster, as well as create newspapers for temporary joy boost.</description>
 		<baseCost>800</baseCost>
 		<techLevel>Industrial</techLevel>
     <prerequisites>
