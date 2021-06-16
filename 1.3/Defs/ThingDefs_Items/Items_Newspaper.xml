@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>VBE_Newspaper</defName>
+    <label>newspaper</label>
+    <description>A perishable newspaper. Reading it will provide colonists with joy.\n\nOut of date newspaper cannot be read and needs to be cleaned up.</description>
+    <graphicData>
+      <texPath>Things/Item/Newspaper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+	<thingClass>VanillaBooksExpanded.Newspaper</thingClass>
+	<tickerType>Normal</tickerType>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+		<MaxHitPoints>20</MaxHitPoints>
+		<WorkToMake>2100</WorkToMake>
+		<Mass>0.1</Mass>
+		<Beauty>-1</Beauty>
+		<Flammability>1.0</Flammability>
+        <DeteriorationRate>30</DeteriorationRate>
+    </statBases>
+    <stackLimit>1</stackLimit>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_Newspaper</nameMaker>
+			<descriptionMaker>ArtDescription_NewspaperDesc</descriptionMaker>
+			<readingTicks>500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+			<readingEffecter>VBE_ReadingNewspaperEffecter</readingEffecter>
+		</li>
+    </comps>
+    <thingCategories>
+      <li>VBE_Books</li>
+    </thingCategories>
+    <tradeability>Buyable</tradeability>
+    <tradeTags>
+      <li>Book</li>
+    </tradeTags>
+    <costList>
+		<WoodLog>10</WoodLog>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>ResearchSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <unfinishedThingDef>VBE_UnfinishedNewspaper</unfinishedThingDef>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Write</soundWorking>
+      <recipeUsers>
+		<li>VBE_TypewritersTable</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

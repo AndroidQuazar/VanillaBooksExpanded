@@ -1,0 +1,460 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase" Name="VBE_SkillBookBase" Abstract="True">
+    <description>A book with a hard cover. It serves as a joy source and can be read to teach valuable skills.</description>
+    <graphicData>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+	<costStuffCount>20</costStuffCount>
+		<stuffCategories>
+			<li>Leathery</li>
+		</stuffCategories>
+	<thingClass>VanillaBooksExpanded.SkillBook</thingClass>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+		<MaxHitPoints>30</MaxHitPoints>
+		<WorkToMake>334000</WorkToMake>
+		<Mass>0.5</Mass>
+		<Beauty>3</Beauty>
+		<Flammability>1.0</Flammability>
+    </statBases>
+    <stackLimit>1</stackLimit>
+    <thingCategories>
+      <li>VBE_Books</li>
+    </thingCategories>
+    <inspectorTabs>
+      <li>VanillaBooksExpanded.ITab_Book</li>
+    </inspectorTabs>
+    <tradeTags>
+      <li>Book</li>
+    </tradeTags>
+    <costList>
+		<Cloth>75</Cloth>
+    </costList>
+    <recipeMaker>
+      <workSpeedStat>ResearchSpeed</workSpeedStat>
+      <workSkill>Intellectual</workSkill>
+      <unfinishedThingDef>VBE_UnfinishedBook</unfinishedThingDef>
+      <effectWorking>Sculpt</effectWorking>
+      <soundWorking>Recipe_Write</soundWorking>
+      <recipeUsers>
+        <li>VBE_WritersTable</li>
+		<li>VBE_TypewritersTable</li>
+      </recipeUsers>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookShooting</defName>
+    <label>shooting book</label>
+    <graphicData>
+      <texPath>Things/Item/BookShooting</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookShootingName</nameMaker>
+			<descriptionMaker>ArtDescription_BookShootingDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingShootingBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Shooting</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Shooting</workSkill>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookAnimals</defName>
+    <label>animals book</label>
+    <graphicData>
+      <texPath>Things/Item/BookAnimals</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookAnimalsName</nameMaker>
+			<descriptionMaker>ArtDescription_BookAnimalsDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingAnimalsBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Animals</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Animals</workSkill>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookArt</defName>
+    <label>art book</label>
+    <graphicData>
+      <texPath>Things/Item/BookArt</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookArtName</nameMaker>
+			<descriptionMaker>ArtDescription_BookArtDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingArtisticBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Artistic</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Artistic</workSkill>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookConstruction</defName>
+    <label>construction book</label>
+    <graphicData>
+      <texPath>Things/Item/BookConstruction</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookConstructionName</nameMaker>
+			<descriptionMaker>ArtDescription_BookConstructionDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingConstructionBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Construction</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Construction</workSkill>
+    </recipeMaker>
+  </ThingDef>
+
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookCooking</defName>
+    <label>cooking book</label>
+    <graphicData>
+      <texPath>Things/Item/BookCooking</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookCookingName</nameMaker>
+			<descriptionMaker>ArtDescription_BookCookingDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingCookingBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Cooking</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Cooking</workSkill>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookCrafting</defName>
+    <label>crafting book</label>
+    <graphicData>
+      <texPath>Things/Item/BookCrafting</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookCraftingName</nameMaker>
+			<descriptionMaker>ArtDescription_BookCraftingDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingCraftingBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Crafting</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Crafting</workSkill>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookIntellectual</defName>
+    <label>intellectual book</label>
+    <graphicData>
+      <texPath>Things/Item/BookIntellectual</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookIntellectualName</nameMaker>
+			<descriptionMaker>ArtDescription_BookIntellectualDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingIntellectualBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Intellectual</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Intellectual</workSkill>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookMedical</defName>
+    <label>medical book</label>
+    <graphicData>
+      <texPath>Things/Item/BookMedical</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookMedicalName</nameMaker>
+			<descriptionMaker>ArtDescription_BookMedicalDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingMedicalBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Medicine</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Medicine</workSkill>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookMelee</defName>
+    <label>melee book</label>
+    <graphicData>
+      <texPath>Things/Item/BookMelee</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookMeleeName</nameMaker>
+			<descriptionMaker>ArtDescription_BookMeleeDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingMeleeBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Melee</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Melee</workSkill>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookMining</defName>
+    <label>mining book</label>
+    <graphicData>
+      <texPath>Things/Item/BookMining</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookMiningName</nameMaker>
+			<descriptionMaker>ArtDescription_BookMiningDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingMiningBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Mining</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Mining</workSkill>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookGrowing</defName>
+    <label>growing book</label>
+    <graphicData>
+      <texPath>Things/Item/BookPlants</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookGrowingName</nameMaker>
+			<descriptionMaker>ArtDescription_BookGrowingDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingGrowingBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Plants</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Plants</workSkill>
+    </recipeMaker>
+  </ThingDef>
+  
+  <ThingDef ParentName="VBE_SkillBookBase">
+    <defName>VBE_BookSocial</defName>
+    <label>social book</label>
+    <graphicData>
+      <texPath>Things/Item/BookSocial</texPath>
+    </graphicData>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<nameMaker>ArtDescription_BookSocialName</nameMaker>
+			<descriptionMaker>ArtDescription_BookSocialDesc</descriptionMaker>
+			<readingEffecter>VBE_ReadingSocialBookEffecter</readingEffecter>
+			<skillData>
+				<skillToTeach>Social</skillToTeach>
+				<baseGainedXPper1Tick>1</baseGainedXPper1Tick>
+				<Awful>0.1</Awful>
+				<Poor>0.3</Poor>
+				<Normal>0.5</Normal>
+				<Good>0.8</Good>
+				<Excellent>1.0</Excellent>
+				<Masterwork>1.5</Masterwork>
+				<Legendary>2</Legendary>
+			</skillData>
+			<readingTicks>3500</readingTicks>
+			<joyAmountPerTick>0.0001</joyAmountPerTick>
+		</li>
+		<li>
+			<compClass>CompQuality</compClass>
+		</li>
+    </comps>
+    <recipeMaker>
+      <workSkill>Social</workSkill>
+    </recipeMaker>
+  </ThingDef>
+
+</Defs>

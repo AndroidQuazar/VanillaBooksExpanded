@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <WorkTypeDef>
+    <defName>VBE_Writing</defName>
+    <labelShort>Writing</labelShort>
+    <pawnLabel>Writer</pawnLabel>
+    <gerundLabel>writing</gerundLabel>
+    <description>Perform writing work.</description>
+    <verb>Write at</verb>
+    <naturalPriority>50</naturalPriority>
+    <relevantSkills>
+      <li>Intellectual</li>
+    </relevantSkills>
+    <workTags>
+      <li>Intellectual</li>
+      <li>Commoner</li>
+      <li>AllWork</li>
+    </workTags>
+  </WorkTypeDef>
+
+</Defs>

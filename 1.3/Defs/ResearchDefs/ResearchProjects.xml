@@ -1,0 +1,29 @@
+﻿<?Yml version="1.0" encoding="utf8" ?>
+<Defs>
+
+	<ResearchProjectDef>
+		<defName>VBE_Writing</defName>
+		<label>writing</label>
+		<tab>VanillaExpanded</tab>
+		<description>Construct a writing desk and have your colonists write books that pass their knowledge to other members of their society.</description>
+		<baseCost>400</baseCost>
+		<techLevel>Medieval</techLevel>
+		<researchViewY>7</researchViewY>
+		<researchViewX>3</researchViewX>
+	</ResearchProjectDef>
+	
+	<ResearchProjectDef>
+		<defName>VBE_Printing</defName>
+		<label>printing</label>
+		<tab>VanillaExpanded</tab>
+		<description>Build a typwriter, which allows your colonists to write books significantly faster, as well as create newspapers for temporary joy boost.</description>
+		<baseCost>800</baseCost>
+		<techLevel>Industrial</techLevel>
+    <prerequisites>
+      <li>VBE_Writing</li>
+    </prerequisites>
+		<researchViewY>7</researchViewY>
+		<researchViewX>4</researchViewX>
+	</ResearchProjectDef>
+	
+</Defs>

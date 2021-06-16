@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<EffecterDef>
+		<defName>VBE_ReadingNewspaperEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingNewspaper</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingNewspaper</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/Newspaper_Reading</texPath>
+			<drawSize>1</drawSize>
+		</graphicData>
+	</ThingDef>
+	
+	<EffecterDef>
+		<defName>VBE_ReadingTechBlueprintEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingTechBlueprint</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingTechBlueprint</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/TechBlueprint_Reading</texPath>
+			<drawSize>1</drawSize>
+		</graphicData>
+	</ThingDef>
+	
+	<EffecterDef>
+		<defName>VBE_ReadingMapEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingMap</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingMap</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/Map_Reading</texPath>
+			<drawSize>1</drawSize>
+		</graphicData>
+	</ThingDef>
+
+
+	<EffecterDef>
+		<defName>VBE_ReadingShootingBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingShootingBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingShootingBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookShooting_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+	<EffecterDef>
+		<defName>VBE_ReadingAnimalsBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingAnimalsBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingAnimalsBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookAnimals_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+
+	<EffecterDef>
+		<defName>VBE_ReadingArtisticBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingArtisticBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingArtisticBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookArtistic_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+	<EffecterDef>
+		<defName>VBE_ReadingConstructionBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingConstructionBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingConstructionBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookConstruction_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+
+	<EffecterDef>
+		<defName>VBE_ReadingCookingBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingCookingBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingCookingBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookCooking_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+
+	<EffecterDef>
+		<defName>VBE_ReadingCraftingBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingCraftingBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingCraftingBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookCrafting_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+
+	<EffecterDef>
+		<defName>VBE_ReadingIntellectualBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingIntellectualBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingIntellectualBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookIntellectual_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+
+	<EffecterDef>
+		<defName>VBE_ReadingMedicalBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingMedicalBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingMedicalBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookMedical_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+
+	<EffecterDef>
+		<defName>VBE_ReadingMeleeBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingMeleeBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingMeleeBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookMelee_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+	<EffecterDef>
+		<defName>VBE_ReadingMiningBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingMiningBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingMiningBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookMining_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+	<EffecterDef>
+		<defName>VBE_ReadingGrowingBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingGrowingBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingGrowingBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookPlants_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+	<EffecterDef>
+		<defName>VBE_ReadingSocialBookEffecter</defName>
+		<children>
+			<li>
+				<subEffecterClass>VanillaBooksExpanded.SubEffecter_BookSymbol</subEffecterClass>
+				<moteDef>VBE_ReadingSocialBook</moteDef>
+			</li>
+		</children>
+	</EffecterDef>
+
+	<ThingDef ParentName="MoteBase">
+		<defName>VBE_ReadingSocialBook</defName>
+		<thingClass>VanillaBooksExpanded.MoteDualAttachedForBook</thingClass>
+		<altitudeLayer>MetaOverlays</altitudeLayer>
+		<mote>
+			<solidTime>600</solidTime>
+			<rotateTowardsTarget>true</rotateTowardsTarget>
+		</mote>
+		<graphicData>
+			<texPath>Things/Motes/BookSocial_Reading</texPath>
+			<drawSize>0.8</drawSize>
+		</graphicData>
+	</ThingDef>
+
+</Defs>

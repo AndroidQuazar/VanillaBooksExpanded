@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <WorkGiverDef>
+    <defName>VBE_DoBillsWrite</defName>
+    <label>write books</label>
+    <giverClass>WorkGiver_DoBill</giverClass>
+    <workType>VBE_Writing</workType>
+    <priorityInType>100</priorityInType>
+    <fixedBillGiverDefs>
+      <li>VBE_WritersTable</li>
+	  <li>VBE_TypewritersTable</li>
+    </fixedBillGiverDefs>
+    <verb>write</verb>
+    <gerund>writing at</gerund>
+    <requiredCapacities>
+      <li>Manipulation</li>
+    </requiredCapacities>
+    <prioritizeSustains>true</prioritizeSustains>
+  </WorkGiverDef>
+
+</Defs>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BaseFilth">
+    <defName>VBE_Filth_Newspaper</defName>
+    <label>old newspaper</label>
+    <graphicData>
+		<texPath>Things/Filth/OldNewspaper</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<onGroundRandomRotateAngle>35</onGroundRandomRotateAngle>
+    </graphicData>
+    <filth>
+		<!--
+      <placementMask>
+        <li>Terrain</li>
+        <li>Unnatural</li>
+      </placementMask>
+	  -->
+      <disappearsInDays>45~50</disappearsInDays>
+      <cleaningWorkToReduceThickness>35</cleaningWorkToReduceThickness>
+      <canFilthAttach>true</canFilthAttach>
+      <cleaningSound>Interact_CleanFilth_Scattered</cleaningSound>
+    </filth>
+  </ThingDef>
+
+
+</Defs>

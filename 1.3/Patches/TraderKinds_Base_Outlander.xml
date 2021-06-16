@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName = "Caravan_Outlander_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Tag">
+			<tradeTag>Book</tradeTag>
+			<thingDefCountRange>1~2</thingDefCountRange>
+			<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+			<tradeTag>Book_Blueprint</tradeTag>
+			<thingDefCountRange>1~2</thingDefCountRange>
+			<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+			<tradeTag>Book_Map</tradeTag>
+			<thingDefCountRange>1~2</thingDefCountRange>
+			<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Book</tag></li>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/TraderKindDef[defName = "Orbital_Exotic"]/stockGenerators</xpath>
+		<value>
+			<li Class="StockGenerator_Tag">
+			<tradeTag>Book</tradeTag>
+			<thingDefCountRange>1~2</thingDefCountRange>
+			<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+			<tradeTag>Book_Blueprint</tradeTag>
+			<thingDefCountRange>1~2</thingDefCountRange>
+			<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_Tag">
+			<tradeTag>Book_Map</tradeTag>
+			<thingDefCountRange>1~2</thingDefCountRange>
+			<countRange>1~2</countRange>
+			</li>
+			<li Class="StockGenerator_BuyTradeTag"><tag>Book</tag></li>
+		</value>
+	</Operation>
+
+</Patch>

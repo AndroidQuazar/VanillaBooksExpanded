@@ -1,0 +1,106 @@
+﻿monuments
+wonders
+abodes
+establishments
+defenses
+villages
+bunker building
+towns
+township
+hamlets
+districts
+cities
+settlements
+encampments
+campsites
+barbed wire
+barricades
+defensive fences
+sandbags
+pitffalls
+setting traps
+IEDs
+trenches
+bunker sanitation
+plazas
+homes
+trapping
+fortifying
+fortifications
+materials
+hammers
+demolition
+air conditioning
+accent walls
+access floors
+accessibility
+autodoors
+beds
+end tables
+dressers
+floors
+walls
+architecture
+windows
+air flow
+architects
+tables
+chairs
+arches
+asphalt
+atrium
+attic
+bedroom
+kitchen
+house
+home
+flat
+semi-detached houses
+barracks
+bunkers
+roads
+paths
+highways
+skyscrapers
+balconies
+porches
+beams
+balustrades
+bungalows
+cottages
+barns
+apartments
+condos
+plasteel
+silver
+steel
+uranium
+jade
+wood
+gold
+stone blocks
+roofs
+columns
+stools
+animal beds
+lamps
+sun lamps
+shelves
+armchairs
+couches
+dining chairs
+animal sleeping boxes
+royal furniture
+royal beds
+hospital beds
+furniture
+electrical devices
+supports
+foundations
+energy generation
+bunk housing
+greco architecture
+gothic design
+rennaissance constructions
+entrenching
+carpentry

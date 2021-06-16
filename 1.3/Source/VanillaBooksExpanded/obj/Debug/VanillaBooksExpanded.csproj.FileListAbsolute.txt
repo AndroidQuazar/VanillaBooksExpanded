@@ -1,0 +1,13 @@
+D:\GAMES\RimWorld\Mods\VanillaBooksExpanded\1.1\Assemblies\VanillaBooksExpanded.dll
+D:\GAMES\RimWorld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csprojAssemblyReference.cache
+D:\GAMES\RimWorld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csproj.CoreCompileInputs.cache
+D:\GAMES\RimWorld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.dll
+D:\GAMES\RimWorld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csproj.CopyComplete
+C:\GAMES\Rimworld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csprojAssemblyReference.cache
+C:\GAMES\Rimworld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csproj.CoreCompileInputs.cache
+C:\GAMES\Rimworld\Mods\VanillaBooksExpanded\1.1\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.dll
+C:\GAMES\Rimworld\Mods\VanillaBooksExpanded\1.1\Assemblies\VanillaBooksExpanded.dll
+C:\Steam\steamapps\common\RimWorld\Mods\VanillaBooksExpanded\1.3\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csprojAssemblyReference.cache
+C:\Steam\steamapps\common\RimWorld\Mods\VanillaBooksExpanded\1.3\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.csproj.CoreCompileInputs.cache
+C:\Steam\steamapps\common\RimWorld\Mods\VanillaBooksExpanded\1.3\Source\VanillaBooksExpanded\obj\Debug\VanillaBooksExpanded.dll
+C:\Steam\steamapps\common\RimWorld\Mods\VanillaBooksExpanded\1.3\Assemblies\VanillaBooksExpanded.dll

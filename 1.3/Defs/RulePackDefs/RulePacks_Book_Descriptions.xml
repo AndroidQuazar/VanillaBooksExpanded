@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <RulePackDef>
+    <defName>ArtDescription_BookShooting</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+	  <li>ArtDescriptionUtility_Global</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>physical_description_root->[ShootingSkill][maybe_cont]. [middle_book] [ShootingSkill][maybe_cont]. [ending] [ShootingSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Studying this book increases the shooting skill.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>VBE_BookDescription_Animals</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_animalsbook_desc->[cover] [first_chapters] [AnimalsSkill][maybe_cont]. [middle_book] [AnimalsSkill][maybe_cont]. [ending] [AnimalsSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Being an animals book, reading it will increase the knowledge of animals.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>VBE_BookDescription_Art</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_artbook_desc->[cover] [first_chapters] [ArtSkill][maybe_cont]. [middle_book] [ArtSkill][maybe_cont]. [ending] [ArtSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Being an art book, reading it will increase the knowledge of art.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>VBE_BookDescription_Construction</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_constructionbook_desc->[cover] [first_chapters] [ConstructionSkill][maybe_cont]. [middle_book] [ConstructionSkill][maybe_cont]. [ending] [ConstructionSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Being a construction book, reading it will increase the knowledge of construction.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  <RulePackDef>
+    <defName>VBE_BookDescription_Cooking</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_cookingbook_desc->[cover] [first_chapters] [CookingSkill][maybe_cont]. [middle_book] [CookingSkill][maybe_cont]. [ending] [CookingSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Reading this book will increase the cooking skill.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+    <RulePackDef>
+    <defName>VBE_BookDescription_Crafting</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_craftingbook_desc->[cover] [first_chapters] [CraftingSkill][maybe_cont]. [middle_book] [CraftingSkill][maybe_cont]. [ending] [CraftingSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Reading this book will increase the crafting skill.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+     <RulePackDef>
+    <defName>VBE_BookDescription_Growing</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_growingbook_desc->[cover] [first_chapters] [GrowingSkill][maybe_cont]. [middle_book] [GrowingSkill][maybe_cont]. [ending] [GrowingSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Studying this book increases the growing skill.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+
+     <RulePackDef>
+    <defName>VBE_BookDescription_Intellectual</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_intellectualbook_desc->[cover] [first_chapters] [IntellectualSkill][maybe_cont]. [middle_book] [IntellectualSkill][maybe_cont]. [ending] [IntellectualSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Reading this book will increase the intellectual skill.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+     <RulePackDef>
+    <defName>VBE_BookDescription_Medical</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_medicalbook_desc->[cover] [first_chapters] [MedicalSkill][maybe_cont]. [middle_book] [MedicalSkill][maybe_cont]. [ending] [MedicalSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Studying this book increases the medical skill.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+       <RulePackDef>
+    <defName>VBE_BookDescription_Melee</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_meleebook_desc->[cover] [first_chapters] [MeleeSkill][maybe_cont]. [middle_book] [MeleeSkill][maybe_cont]. [ending] [MeleeSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Being a melee book, reading it will increase the knowledge of melee combat.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+     <RulePackDef>
+    <defName>VBE_BookDescription_Mining</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_miningbook_desc->[cover] [first_chapters] [MiningSkill][maybe_cont]. [middle_book] [MiningSkill][maybe_cont]. [ending] [MiningSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Reading this book will increase the mining skill.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+  
+  
+     <RulePackDef>
+    <defName>VBE_BookDescription_Social</defName>
+    <include>
+      <li>VBE_BookUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+		<li>r_socialbook_desc->[cover] [first_chapters] [SocialSkill][maybe_cont]. [middle_book] [SocialSkill][maybe_cont]. [ending] [SocialSkill][maybe_cont]. This [book] is [book-context][maybe_writingstyles]. Being a social book, reading it will increase the knowledge of social.</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+
+
+</Defs>

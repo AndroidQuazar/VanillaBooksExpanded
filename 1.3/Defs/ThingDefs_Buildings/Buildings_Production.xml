@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BenchBase">
+    <defName>VBE_WritersTable</defName>
+    <label>writers table</label>
+    <description>A work station with all the necessary equipment to write books.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/TableWriters</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <shadowData>
+        <volume>(2.8, 0.3, 0.54)</volume>
+        <offset>(0, 0, -0.18)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <constructEffect>ConstructWood</constructEffect>
+    <costList>
+      <WoodLog>120</WoodLog>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+      <WorkToBuild>2000</WorkToBuild>
+      <MaxHitPoints>180</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Misc</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>VBE_Writing</li>
+    </researchPrerequisites>
+  </ThingDef>
+  
+  <ThingDef ParentName="BenchBase">
+    <defName>VBE_TypewritersTable</defName>
+    <label>typewriter table</label>
+    <description>A work station with all the necessary equipment to write books. This station is equipped with a typewriter which speeds up the work significantly, but does require connection to power.</description>
+    <thingClass>Building_WorkTable</thingClass>
+    <graphicData>
+      <texPath>Things/Building/Misc/TableTypewriters</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(3.5,1.5)</drawSize>
+      <shadowData>
+        <volume>(2.8, 0.3, 0.54)</volume>
+        <offset>(0, 0, -0.18)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.3,0,2.7,1)</rect>
+        <cornerTR>Damage/Corner</cornerTR>
+        <cornerBR>Damage/Corner</cornerBR>
+      </damageData>
+    </graphicData>
+    <constructEffect>ConstructWood</constructEffect>
+    <costList>
+      <WoodLog>100</WoodLog>
+	  <Steel>20</Steel>
+	  <ComponentIndustrial>1</ComponentIndustrial>
+    </costList>
+    <altitudeLayer>Building</altitudeLayer>
+    <fillPercent>0.5</fillPercent>
+    <useHitPoints>True</useHitPoints>
+    <statBases>
+		<WorkToBuild>3500</WorkToBuild>
+		<MaxHitPoints>180</MaxHitPoints>
+		<Flammability>1.0</Flammability>
+		<WorkTableWorkSpeedFactor>1.5</WorkTableWorkSpeedFactor>
+    </statBases>
+    <size>(3,1)</size>
+    <designationCategory>Misc</designationCategory>
+    <passability>PassThroughOnly</passability>
+    <pathCost>70</pathCost>
+    <hasInteractionCell>True</hasInteractionCell>
+    <interactionCellOffset>(0,0,-1)</interactionCellOffset>
+    <surfaceType>Item</surfaceType>
+    <comps>
+        <li Class="CompProperties_Flickable"/>
+        <li Class="CompProperties_Power">
+            <compClass>CompPowerTrader</compClass>
+            <basePowerConsumption>160</basePowerConsumption>
+            <shortCircuitInRain>false</shortCircuitInRain>
+        </li>
+        <li Class="CompProperties_Breakdownable"/>
+    </comps>
+    <inspectorTabs>
+      <li>ITab_Bills</li>
+    </inspectorTabs>
+    <building>
+      <spawnedConceptLearnOpportunity>BillsTab</spawnedConceptLearnOpportunity>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_PreventInteractionSpotOverlap</li>
+    </placeWorkers>
+    <researchPrerequisites>
+      <li>VBE_Printing</li>
+    </researchPrerequisites>
+  </ThingDef>
+
+</Defs>

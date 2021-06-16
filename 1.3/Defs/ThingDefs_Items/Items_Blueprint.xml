@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>VBE_Blueprint</defName>
+    <label>blueprint</label>
+    <description>A blueprint containing technological secrets. Studying it will provide your colony with full understanding of a given research project.\n\nBlueprints containing too advanced knowledge cannot be read until more research projects are completed.</description>
+    <graphicData>
+      <texPath>Things/Item/TechBlueprint</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </graphicData>
+	<thingClass>VanillaBooksExpanded.TechBlueprint</thingClass>
+    <soundInteract>Standard_Drop</soundInteract>
+    <soundDrop>Standard_Drop</soundDrop>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+		<MaxHitPoints>20</MaxHitPoints>
+		<WorkToMake>3340</WorkToMake>
+		<MarketValue>1600</MarketValue>
+		<Mass>0.1</Mass>
+		<Beauty>-1</Beauty>
+		<Flammability>1.0</Flammability>
+        <DeteriorationRate>30</DeteriorationRate>
+    </statBases>
+    <stackLimit>1</stackLimit>
+    <comps>
+		<li Class="VanillaBooksExpanded.CompProperties_Book">
+			<readingEffecter>VBE_ReadingTechBlueprintEffecter</readingEffecter>
+			<readingTicks>26000</readingTicks>
+			<destroyAfterReading>true</destroyAfterReading>
+			<saveReadingProgress>true</saveReadingProgress>
+		</li>
+    </comps>
+    <thingCategories>
+      <li>VBE_Books</li>
+    </thingCategories>
+    <tradeability>Buyable</tradeability>
+    <tradeTags>
+      <li>Book_Blueprint</li>
+    </tradeTags>
+  </ThingDef>
+
+</Defs>

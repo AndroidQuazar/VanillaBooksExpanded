@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>VBE_UnfinishedBook</defName>
+    <label>unfinished book</label>
+    <description>An unfinished book of some sorts.</description>
+    <statBases>
+      <Flammability>1</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedBook</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>
+  
+  <ThingDef ParentName="UnfinishedBase">
+    <defName>VBE_UnfinishedNewspaper</defName>
+    <label>unfinished newspaper</label>
+    <description>An unfinished newspaper.</description>
+    <statBases>
+      <Flammability>1</Flammability>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Item/Unfinished/UnfinishedNewspaper</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stuffCategories Inherit="false" />
+  </ThingDef>
+
+</Defs>
