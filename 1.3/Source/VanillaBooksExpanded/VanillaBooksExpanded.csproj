@@ -51,7 +51,7 @@
     <Compile Include="JoyGiver_ReadBook.cs" />
     <Compile Include="SubEffecter_ReadingBookSymbol.cs" />
     <Compile Include="TaleBookReference.cs" />
-    <Compile Include="SetAuthorName.cs" />
+    <Compile Include="HarmonyPatches.cs" />
     <Compile Include="TaleTextGenerator.cs" />
     <Compile Include="ITab_Book.cs" />
     <Compile Include="Books\CompProperties_Book.cs" />
@@ -64,11 +64,12 @@
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
       <Version>1.3.3050-beta</Version>
-	  		<Private>false</Private>
-		<ExcludeAssets>runtime</ExcludeAssets>
+      <Private>false</Private>
+      <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.1.0</Version>
+	  <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

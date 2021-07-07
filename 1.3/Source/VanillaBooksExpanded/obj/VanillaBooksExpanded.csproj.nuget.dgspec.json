@@ -40,6 +40,7 @@
               "version": "[1.3.3050-beta, )"
             },
             "Lib.Harmony": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "target": "Package",
               "version": "[2.1.0, )"
             }
