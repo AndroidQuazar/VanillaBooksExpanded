@@ -46,7 +46,7 @@ namespace VanillaBooksExpanded
                 if (part.site.Faction != null)
                 {
 
-                    part.parms.threatPoints = Mathf.Max(CustomParmsPoints.Value * 0.5f, part.site.Faction.def.MinPointsToGeneratePawnGroup(PawnGroupKindDefOf.Settlement));
+                    part.parms.threatPoints = Mathf.Max(CustomParmsPoints.Value * 0.5f, part.site.Faction.def.MinPointsToGeneratePawnGroup(PawnGroupKindDefOf.Combat));
                     part.parms.points = part.parms.threatPoints;
                     Log.Message("part.parms.threatPoints: " + part.parms.threatPoints);
                 }
