@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.7.2": {
-      "Krafs.Rimworld.Ref/1.3.3052-beta": {
+      "Krafs.Rimworld.Ref/1.3.3117": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -85,7 +85,7 @@
           "ref/net472/mscorlib.dll": {}
         }
       },
-      "Lib.Harmony/2.1.0": {
+      "Lib.Harmony/2.1.1": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -96,7 +96,7 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win": {
-      "Krafs.Rimworld.Ref/1.3.3052-beta": {
+      "Krafs.Rimworld.Ref/1.3.3117": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -179,7 +179,7 @@
           "ref/net472/mscorlib.dll": {}
         }
       },
-      "Lib.Harmony/2.1.0": {
+      "Lib.Harmony/2.1.1": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -190,7 +190,7 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x64": {
-      "Krafs.Rimworld.Ref/1.3.3052-beta": {
+      "Krafs.Rimworld.Ref/1.3.3117": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -273,7 +273,7 @@
           "ref/net472/mscorlib.dll": {}
         }
       },
-      "Lib.Harmony/2.1.0": {
+      "Lib.Harmony/2.1.1": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -284,7 +284,7 @@
       }
     },
     ".NETFramework,Version=v4.7.2/win-x86": {
-      "Krafs.Rimworld.Ref/1.3.3052-beta": {
+      "Krafs.Rimworld.Ref/1.3.3117": {
         "type": "package",
         "compile": {
           "ref/net472/Assembly-CSharp-firstpass.dll": {},
@@ -367,7 +367,7 @@
           "ref/net472/mscorlib.dll": {}
         }
       },
-      "Lib.Harmony/2.1.0": {
+      "Lib.Harmony/2.1.1": {
         "type": "package",
         "compile": {
           "lib/net472/0Harmony.dll": {}
@@ -379,16 +379,16 @@
     }
   },
   "libraries": {
-    "Krafs.Rimworld.Ref/1.3.3052-beta": {
-      "sha512": "5twfdcdrGYA9VUgsmh/ag8VG4znTu4pdF+jd4l7fwVp72GyPNo0aAW5DuaRXMC1NVVkQNRM+2YgC1N6FjfGK2g==",
+    "Krafs.Rimworld.Ref/1.3.3117": {
+      "sha512": "mxTQbelrvwpnVfA+WztZFk68J/49uwbZQPgb1TpG9rC6+rRB0IhJLmR85jZ1Ua7WetNGiwkbmVltDyKlpEGudQ==",
       "type": "package",
-      "path": "krafs.rimworld.ref/1.3.3052-beta",
+      "path": "krafs.rimworld.ref/1.3.3117",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE.txt",
         "icon.png",
-        "krafs.rimworld.ref.1.3.3052-beta.nupkg.sha512",
+        "krafs.rimworld.ref.1.3.3117.nupkg.sha512",
         "krafs.rimworld.ref.nuspec",
         "ref/net472/Assembly-CSharp-firstpass.dll",
         "ref/net472/Assembly-CSharp.dll",
@@ -470,16 +470,16 @@
         "ref/net472/mscorlib.dll"
       ]
     },
-    "Lib.Harmony/2.1.0": {
-      "sha512": "Fp/Ky297MdU+iBQ44xFnJP1RwgDz/RrWaQBDqkqFlWMxDJrmuIkr2DCiiojGnTDf4Qz0YjXepDj0bChHgU1/vQ==",
+    "Lib.Harmony/2.1.1": {
+      "sha512": "CZiVcq01bVIjL2baWW5SVGZWyd6ew8adFp4BB2bzZfIGcWkTEto0G9sKu+9HDrEd75qBq3EHnZxx/gizi4NnqA==",
       "type": "package",
-      "path": "lib.harmony/2.1.0",
+      "path": "lib.harmony/2.1.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "HarmonyLogo.png",
         "LICENSE",
-        "lib.harmony.2.1.0.nupkg.sha512",
+        "lib.harmony.2.1.1.nupkg.sha512",
         "lib.harmony.nuspec",
         "lib/net35/0Harmony.dll",
         "lib/net35/0Harmony.xml",
@@ -500,12 +500,12 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
-      "Krafs.Rimworld.Ref >= 1.3.3052-beta",
-      "Lib.Harmony >= 2.1.0"
+      "Krafs.Rimworld.Ref >= 1.3.3117",
+      "Lib.Harmony >= 2.1.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vova\\.nuget\\packages\\": {}
+    "C:\\Users\\Sarg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -513,12 +513,12 @@
       "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaBooksExpanded\\1.3\\Source\\VanillaBooksExpanded\\VanillaBooksExpanded.csproj",
       "projectName": "VanillaBooksExpanded",
       "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaBooksExpanded\\1.3\\Source\\VanillaBooksExpanded\\VanillaBooksExpanded.csproj",
-      "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\Sarg\\.nuget\\packages\\",
       "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaBooksExpanded\\1.3\\Source\\VanillaBooksExpanded\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Vova\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sarg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -540,12 +540,12 @@
           "Krafs.Rimworld.Ref": {
             "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "target": "Package",
-            "version": "[1.3.3052-beta, )"
+            "version": "[1.3.3117, )"
           },
           "Lib.Harmony": {
             "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "target": "Package",
-            "version": "[2.1.0, )"
+            "version": "[2.1.1, )"
           }
         }
       }

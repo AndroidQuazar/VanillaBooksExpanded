@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "O0HU7F4a9ni8tMbPFvOwPUj782VfnSqj3+HDFNmONPkbTACcg9XVZxbaNtjNvxMXXYeCKFtHmqKMWQm0Mu+QKQ==",
+  "dgSpecHash": "UNsUU9Ueze6rL/kr1yVKSuaGMxsPD8kt16KGKMiopNGBFlSen0GhyWnvraZdj4o8VvfOSb2pfzw3vHTp+0c+Wg==",
   "success": true,
   "projectFilePath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaBooksExpanded\\1.3\\Source\\VanillaBooksExpanded\\VanillaBooksExpanded.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Vova\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3052-beta\\krafs.rimworld.ref.1.3.3052-beta.nupkg.sha512",
-    "C:\\Users\\Vova\\.nuget\\packages\\lib.harmony\\2.1.0\\lib.harmony.2.1.0.nupkg.sha512"
+    "C:\\Users\\Sarg\\.nuget\\packages\\krafs.rimworld.ref\\1.3.3117\\krafs.rimworld.ref.1.3.3117.nupkg.sha512",
+    "C:\\Users\\Sarg\\.nuget\\packages\\lib.harmony\\2.1.1\\lib.harmony.2.1.1.nupkg.sha512"
   ],
   "logs": []
 }

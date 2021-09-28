@@ -130,6 +130,14 @@ namespace VanillaBooksExpanded
                         JoyUtility.TryGainRecRoomThought(pawn);
                     }
 
+                    if (DefDatabase< HistoryEventDef>.GetNamedSilentFail("VME_ReadBook")!=null) {
+
+                        Find.HistoryEventsManager.RecordEvent(new HistoryEvent(DefDatabase<HistoryEventDef>.GetNamedSilentFail("VME_ReadBook"), pawn.Named(HistoryEventArgsNames.Doer)), true);
+
+                    }
+
+
+
                     if (book.Props.destroyAfterReading)
                     {
                         book.Destroy(DestroyMode.Vanish);
