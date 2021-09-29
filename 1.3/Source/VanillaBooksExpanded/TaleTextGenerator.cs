@@ -23,7 +23,6 @@ namespace VanillaBooksExpanded
 				case TextGenerationPurpose.ArtDescription:
 					rootKeyword = compBook.Props.nameMaker.RulesImmediate
 						.Where(x => x.keyword != null && x.keyword.Length > 0).RandomElement().keyword;
-					//Log.Message("rootKeyword for description: " + rootKeyword);
 					if (tale != null && !Rand.Chance(0.2f))
 					{
 						request.Includes.Add(RulePackDefOf.ArtDescriptionRoot_HasTale);
@@ -40,7 +39,6 @@ namespace VanillaBooksExpanded
 				case TextGenerationPurpose.ArtName:
 					rootKeyword = compBook.Props.descriptionMaker.RulesImmediate
 						.Where(x => x.keyword != null && x.keyword.Length > 0).RandomElement().keyword;
-					//Log.Message("rootKeyword for name: " + rootKeyword);
 					if (tale != null)
 					{
 						request.IncludesBare.AddRange(tale.GetTextGenerationIncludes());

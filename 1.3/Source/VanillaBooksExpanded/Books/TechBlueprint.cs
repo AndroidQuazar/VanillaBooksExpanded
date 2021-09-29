@@ -28,21 +28,24 @@ namespace VanillaBooksExpanded
                 {
                     return base.Label + " (" + this.researchProject.LabelCap + ")";
                 }
+                else
+                {
+                    Log.Error("TEch is null, this shouldn't happen");
+                }
                 return base.Label;
             }
         }
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+
+        public override void PostMake()
         {
-            base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad && !initialized)
+            base.PostMake();
+            if (!initialized)
             {
                 this.used = false;
                 this.researchProject = DefDatabase<ResearchProjectDef>.AllDefs.RandomElement();
-                //Log.Message(this + " is created");
                 initialized = true;
             }
         }
-
         public void UnlockResearch(Pawn pawn)
         {
             Find.ResearchManager.FinishProject(this.researchProject, false, pawn);

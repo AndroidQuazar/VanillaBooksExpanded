@@ -10,12 +10,12 @@
         "projectUniqueName": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaBooksExpanded\\1.3\\Source\\VanillaBooksExpanded\\VanillaBooksExpanded.csproj",
         "projectName": "VanillaBooksExpanded",
         "projectPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaBooksExpanded\\1.3\\Source\\VanillaBooksExpanded\\VanillaBooksExpanded.csproj",
-        "packagesPath": "C:\\Users\\Sarg\\.nuget\\packages\\",
+        "packagesPath": "C:\\Users\\Vova\\.nuget\\packages\\",
         "outputPath": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\RimWorld\\Mods\\VanillaBooksExpanded\\1.3\\Source\\VanillaBooksExpanded\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "configFilePaths": [
-          "C:\\Users\\Sarg\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Vova\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -37,7 +37,7 @@
             "Krafs.Rimworld.Ref": {
               "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[1.3.3117, )"
+              "version": "[1.3.3136-beta, )"
             },
             "Lib.Harmony": {
               "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",

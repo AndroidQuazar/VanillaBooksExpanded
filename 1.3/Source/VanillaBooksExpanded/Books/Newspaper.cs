@@ -16,20 +16,15 @@ namespace VanillaBooksExpanded
     {
         public int expireTime = 0;
         public int expireTimeAbs = 0;
-
         public bool initialized = false;
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        public override void PostMake()
         {
-            base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad && !this.initialized)
+            base.PostMake();
+            if (!this.initialized)
             {
                 var randValue = Rand.RangeInclusive(60000, 180000);
-                randValue = Rand.RangeInclusive(60, 180);
-
                 this.expireTime = Find.TickManager.TicksGame + randValue;
                 this.expireTimeAbs = Find.TickManager.TicksAbs + randValue;
-
-                //Log.Message(this + " is created");
                 var comp = this.TryGetComp<CompBook>();
                 if (!comp.Active)
                 {

@@ -13,12 +13,11 @@ namespace VanillaBooksExpanded
     public class SkillBook : Book
     {
         public bool initialized = false;
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+        public override void PostMake()
         {
-            base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad && !initialized)
+            base.PostMake();
+            if (!initialized)
             {
-                //Log.Message(this + " is created");
                 var comp = this.TryGetComp<CompBook>();
                 if (!comp.Active)
                 {
@@ -27,6 +26,7 @@ namespace VanillaBooksExpanded
                 initialized = true;
             }
         }
+
         public override IEnumerable<FloatMenuOption> GetFloatMenuOptions(Pawn myPawn)
         {
             if (!ReachabilityUtility.CanReach(myPawn, this, PathEndMode.InteractionCell, Danger.Deadly, false))

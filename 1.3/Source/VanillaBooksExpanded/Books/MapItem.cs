@@ -26,12 +26,12 @@ namespace VanillaBooksExpanded
             "OpportunitySite_PeaceTalks",
             "EndGame_ShipEscape",
         };
-        public override void SpawnSetup(Map map, bool respawningAfterLoad)
+
+        public override void PostMake()
         {
-            base.SpawnSetup(map, respawningAfterLoad);
-            if (!respawningAfterLoad && !this.initialized)
+            base.PostMake();
+            if (!this.initialized)
             {
-                //Log.Message(this + " is created", true);
                 this.initialized = true;
                 this.questToUnlock = GetRandomQuestDef();
             }

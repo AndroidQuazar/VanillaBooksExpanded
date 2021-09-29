@@ -70,8 +70,6 @@ namespace VanillaBooksExpanded
                         if (compBook != null && compBook.Props.skillData.skillToTeach != null)
                         {
                             var learnValue = skillBook.GetLearnAmount();
-                            //Log.Message(pawn + " learn " + compBook.Props.skillData.skillToTeach + " ("
-                            //    + learnValue + ") from " + book + " - " + book.TryGetComp<CompQuality>().Quality, true);
                             actor.skills.Learn(compBook.Props.skillData.skillToTeach, learnValue);
                         }
                     }

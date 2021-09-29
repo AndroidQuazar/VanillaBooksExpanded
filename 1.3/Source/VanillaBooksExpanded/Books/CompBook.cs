@@ -44,16 +44,13 @@ namespace VanillaBooksExpanded
 
 		public void InitializeBook()
 		{
-			//Log.Message("Initialize book");
 			if (taleRef != null)
 			{
 				taleRef.ReferenceDestroyed();
 				taleRef = null;
 			}
 			taleRef = TaleBookReference.Taleless;
-			//Log.Message("Generating title");
 			titleInt = GenerateTitle();
-			//Log.Message("Title: " + titleInt);
 		}
 
 		public void JustCreatedBy(Pawn pawn)

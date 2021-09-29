@@ -33,21 +33,9 @@ namespace VanillaBooksExpanded
 					{
 						link2.UpdateDrawPos();
 					}
-					//exactPosition = (link1.LastDrawPos + link2.LastDrawPos) * 0.5f;
 					if (def.mote.rotateTowardsTarget)
 					{
-						//if (link1.Target.Thing.Rotation.Opposite == Rot4.East)
-						//{
-						//	exactRotation = 0f;
-						//}
-						//if (link1.Target.Thing.Rotation.Opposite == Rot4.West)
-						//{
-						//	exactRotation = 180f;
-						//}
-
-							exactRotation = link1.Target.Thing.Rotation.Opposite.AsAngle - 90f;
-							//Log.Message(link2.Target.Thing + " - " + link1.Target.Thing.Rotation.Opposite + " - " + exactRotation, true);
-							//link1.LastDrawPos.AngleToFlat(link2.LastDrawPos);
+						exactRotation = link1.Target.Thing.Rotation.Opposite.AsAngle - 90f;
 					}
 					if (def.mote.scaleToConnectTargets)
 					{

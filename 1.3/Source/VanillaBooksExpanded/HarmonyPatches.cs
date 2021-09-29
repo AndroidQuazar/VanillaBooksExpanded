@@ -34,6 +34,16 @@ namespace VanillaBooksExpanded
                     }
                 }
             }
+            LongEventHandler.ExecuteWhenFinished(delegate
+            {
+                foreach (var def in DefDatabase<ThingDef>.AllDefs)
+                {
+                    if (typeof(Book).IsAssignableFrom(def.thingClass))
+                    {
+                        def.stackLimit = 1;
+                    }
+                }
+            });
         }
 
         public static float? CustomParmsPoints;
@@ -60,6 +70,29 @@ namespace VanillaBooksExpanded
             if (product is Book book)
             {
                 book.TryGetComp<CompBook>().JustCreatedBy(worker);
+            }
+        }
+    }
+
+    [HarmonyPatch(typeof(StockGeneratorUtility))]
+    [HarmonyPatch("TryMakeForStock")]
+    public static class Patch_TryMakeForStock
+    {
+        public static IEnumerable<Thing> Postfix(IEnumerable<Thing> __result, ThingDef thingDef, int count, Faction faction)
+        {
+            foreach (var t in __result)
+            {
+                if (t is Book && t.stackCount > 1)
+                {
+                    for (var i = 0; i < t.stackCount; i++)
+                    {
+                        yield return StockGeneratorUtility.TryMakeForStockSingle(thingDef, 1, faction);
+                    }
+                }
+                else
+                {
+                    yield return t;
+                }
             }
         }
     }
