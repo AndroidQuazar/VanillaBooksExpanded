@@ -19,21 +19,16 @@ namespace VanillaBooksExpanded
         public ResearchProjectDef researchProject;
 
         public bool initialized = false;
-
-        public override string Label
+        public override string Label => GetLabelFrom(base.Label);
+        public override string LabelNoCount => GetLabelFrom(base.LabelNoCount);
+        private string GetLabelFrom(string baseLabel)
         {
-            get
+            if (this.researchProject != null)
             {
-                if (this.researchProject != null)
-                {
-                    return base.Label + " (" + this.researchProject.LabelCap + ")";
-                }
-                else
-                {
-                    Log.Error("TEch is null, this shouldn't happen");
-                }
-                return base.Label;
+                return baseLabel + " (" + this.researchProject.LabelCap + ")";
             }
+            return baseLabel;
+
         }
 
         public override void PostMake()

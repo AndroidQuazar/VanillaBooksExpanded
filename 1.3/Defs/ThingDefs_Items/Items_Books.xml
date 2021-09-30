@@ -16,6 +16,7 @@
     <soundInteract>Standard_Drop</soundInteract>
     <soundDrop>Standard_Drop</soundDrop>
     <socialPropernessMatters>true</socialPropernessMatters>
+	<tradeNeverStack>true</tradeNeverStack>
     <statBases>
 		<MaxHitPoints>30</MaxHitPoints>
 		<WorkToMake>334000</WorkToMake>
